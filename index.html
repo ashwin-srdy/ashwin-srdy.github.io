@@ -4,825 +4,1355 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Ashwin Kumar | Cyberpunk AI Engineer & Netrunner OS v2.077</title>
-  <meta name="description" content="Ashwin Kumar Sangareddypeta — Software Engineer / Agentic AI Engineer at SmarterDx. LangGraph clinical agents, DAG pipelines, and AWS Bedrock infrastructure.">
-  <meta name="keywords" content="Ashwin Kumar, Agentic AI, LangGraph, Clinical AI, SmarterDx, Pieces, AWS Bedrock, Netrunner, Cyberpunk Portfolio">
+  <!-- Primary SEO Meta Tags -->
+  <title>Ashwin Kumar Sangareddypeta — AI Engineer & Applied Scientist</title>
+  <meta name="title" content="Ashwin Kumar Sangareddypeta — AI Engineer & Applied Scientist">
+  <meta name="description" content="AI Engineer specializing in Agentic AI, Multi-Agent Systems, Healthcare AI, and LLM Infrastructure. Architecting LangGraph clinical workflows, AWS Bedrock optimization, and GPU acceleration.">
+  <meta name="keywords" content="Ashwin Kumar Sangareddypeta, AI Engineer, Agentic AI, Multi-Agent Systems, LangGraph, Healthcare AI, Clinical AI, AWS Bedrock, CuDA ML, Machine Learning, Dallas Texas">
+  <meta name="author" content="Ashwin Kumar Sangareddypeta">
+  <link rel="canonical" href="https://ashwin-srdy.github.io/">
+
+  <!-- Open Graph / Facebook / LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ashwin-srdy.github.io/">
+  <meta property="og:title" content="Ashwin Kumar Sangareddypeta — AI Engineer & Applied Scientist">
+  <meta property="og:description" content="AI Engineer building production agentic AI systems, multi-agent workflows, and clinical AI infrastructure. Based in Dallas, TX.">
+  <meta property="og:image" content="https://ashwin-srdy.github.io/assets/img/me.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://ashwin-srdy.github.io/">
+  <meta property="twitter:title" content="Ashwin Kumar Sangareddypeta — AI Engineer & Applied Scientist">
+  <meta property="twitter:description" content="AI Engineer building production agentic AI systems, multi-agent workflows, and clinical AI infrastructure. Based in Dallas, TX.">
+  <meta property="twitter:image" content="https://ashwin-srdy.github.io/assets/img/me.jpg">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/favicon.png" rel="icon" type="image/png">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Bootstrap Icons -->
+  <!-- Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  
-  <!-- Iconify Icons (for AI/ML icons) -->
   <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 
-  <!-- Cyberpunk Main CSS -->
+  <!-- Main Stylesheet -->
   <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- Structured Data: JSON-LD Person -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ashwin Kumar Sangareddypeta",
+    "url": "https://ashwin-srdy.github.io/",
+    "image": "https://ashwin-srdy.github.io/assets/img/me.jpg",
+    "jobTitle": "AI Engineer",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "SmarterDx"
+    },
+    "alumniOf": [
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "The University of Texas at Dallas"
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "Institute of Aeronautical Engineering"
+      }
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Dallas",
+      "addressRegion": "TX",
+      "addressCountry": "United States"
+    },
+    "sameAs": [
+      "https://github.com/ashwin-srdy",
+      "https://www.linkedin.com/in/ashwin-srdy/",
+      "https://linktr.ee/ashwin_srdy",
+      "https://medium.com/@ashwinsang1904"
+    ],
+    "knowsAbout": [
+      "Agentic AI",
+      "Multi-Agent Systems",
+      "LangGraph",
+      "Healthcare AI",
+      "Machine Learning",
+      "Large Language Models",
+      "AWS Bedrock",
+      "FastAPI",
+      "Docker"
+    ]
+  }
+  </script>
 </head>
 
 <body>
-  <!-- Cyberpunk Environmental Layers -->
-  <div class="scanline-overlay"></div>
-  <div class="cyber-grid"></div>
-  <canvas id="cyber-particles"></canvas>
+
+  <!-- Ambient Technical Background -->
+  <div class="ambient-background" aria-hidden="true">
+    <div class="ambient-grid"></div>
+    <div class="ambient-glow-1"></div>
+    <div class="ambient-glow-2"></div>
+  </div>
 
   <!-- ================================================================
-       TOP HUD NAVIGATION
+       STICKY HEADER & NAVIGATION
        ================================================================ -->
-  <header class="cp-top-bar">
-    <a href="#hero" class="cp-brand">
-      <span class="cp-brand-logo">ASHWIN_K</span>
-      <span class="cp-brand-tag">NETRUNNER // v2.077</span>
-    </a>
+  <header class="nav-header">
+    <div class="nav-container">
+      <nav class="nav-bar">
+        <a href="#hero" class="nav-brand">
+          <span class="brand-badge">A</span>
+          <span>Ashwin Kumar</span>
+          <span class="brand-text-role">AI Engineer</span>
+        </a>
 
-    <nav>
-      <ul class="cp-nav-menu">
-        <li><a href="#hero" class="cp-nav-link active"><span class="nav-num">01</span> CHARACTER</a></li>
-        <li><a href="#telemetry" class="cp-nav-link"><span class="nav-num">02</span> KPIS & STATS</a></li>
-        <li><a href="#cyberware" class="cp-nav-link"><span class="nav-num">03</span> CYBERWARE</a></li>
-        <li><a href="#missions" class="cp-nav-link"><span class="nav-num">04</span> MISSIONS</a></li>
-        <li><a href="#shards" class="cp-nav-link"><span class="nav-num">05</span> SHARDS</a></li>
-        <li><a href="#perks" class="cp-nav-link"><span class="nav-num">06</span> PERKS</a></li>
-        <li><a href="#uplink" class="cp-nav-link"><span class="nav-num">07</span> UPLINK</a></li>
-      </ul>
-    </nav>
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#impact" class="nav-link">Impact</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#arsenal" class="nav-link">Arsenal</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
 
-    <div class="cp-hud-controls">
-      <button class="cp-audio-btn" id="audioToggleBtn" title="Toggle Cyberpunk UI SFX">
-        <i class="bi bi-volume-up"></i> SFX: ON
-      </button>
-      <button class="cp-menu-toggle" aria-label="Toggle Navigation">
-        <i class="bi bi-list"></i>
-      </button>
+        <div class="nav-actions">
+          <button id="soundToggleBtn" class="sound-toggle-btn" title="Toggle UI Sound Effects">
+            <i class="bi bi-volume-mute"></i>
+          </button>
+          <a href="#resumeModal" class="btn btn-secondary btn-sm open-resume-btn">
+            <i class="bi bi-file-earmark-person"></i> Resume
+          </a>
+          <button class="mobile-nav-toggle" aria-label="Toggle navigation menu">
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
+      </nav>
     </div>
   </header>
 
-  <!-- ================================================================
-       MAIN GAME HUD INTERFACE
-       ================================================================ -->
-  <main class="cp-main-container">
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer">
+    <ul class="mobile-drawer-links">
+      <li><a href="#hero" class="mobile-drawer-link">Home</a></li>
+      <li><a href="#about" class="mobile-drawer-link">About</a></li>
+      <li><a href="#impact" class="mobile-drawer-link">Impact & Telemetry</a></li>
+      <li><a href="#experience" class="mobile-drawer-link">Experience</a></li>
+      <li><a href="#projects" class="mobile-drawer-link">Case Studies & Projects</a></li>
+      <li><a href="#arsenal" class="mobile-drawer-link">Technical Arsenal</a></li>
+      <li><a href="#education" class="mobile-drawer-link">Education</a></li>
+      <li><a href="#contact" class="mobile-drawer-link">Contact</a></li>
+    </ul>
+    <div class="mobile-drawer-footer">
+      <a href="#resumeModal" class="btn btn-primary open-resume-btn" style="width: 100%;">
+        <i class="bi bi-file-earmark-arrow-down"></i> View Full Resume
+      </a>
+      <a href="mailto:ashwinsang.work@gmail.com" class="btn btn-secondary" style="width: 100%;">
+        <i class="bi bi-envelope"></i> ashwinsang.work@gmail.com
+      </a>
+    </div>
+  </div>
 
-    <!-- 01. CHARACTER HERO -->
-    <section id="hero" class="cp-section">
-      <div class="cp-hero-grid">
-        
-        <!-- Left: Character Card Frame -->
-        <div class="cp-character-card">
-          <div class="cp-avatar-wrap">
-            <img src="assets/img/me.jpg" alt="Ashwin Kumar Sangareddypeta" class="cp-avatar-img">
-            <div class="cp-status-pill">
-              <span class="cp-status-dot"></span> SYNAPSE: ACTIVE
-            </div>
-          </div>
+  <main>
 
-          <div class="cp-character-telemetry">
-            <div class="cp-telemetry-row">
-              <span class="cp-telemetry-label">// CALLSIGN</span>
-              <span class="cp-telemetry-val">Ashwin Kumar</span>
-            </div>
-            <div class="cp-telemetry-row">
-              <span class="cp-telemetry-label">// FACTION</span>
-              <span class="cp-telemetry-val">SmarterDx (ML/AI Eng)</span>
-            </div>
-            <div class="cp-telemetry-row">
-              <span class="cp-telemetry-label">// SECTOR</span>
-              <span class="cp-telemetry-val">Dallas, TX, USA</span>
-            </div>
-            <div class="cp-telemetry-row">
-              <span class="cp-telemetry-label">// IMPLANTS</span>
-              <span class="cp-telemetry-val">LangGraph, MCP, Bedrock</span>
-            </div>
-            <div class="cp-telemetry-row">
-              <span class="cp-telemetry-label">// ALIGNMENT</span>
-              <span class="cp-telemetry-val">Clinical Agentic AI</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right: Bio Data & Terminal -->
-        <div class="cp-hero-content">
-          <div class="cp-hero-glitch-title">Ashwin Kumar Sangareddypeta</div>
+    <!-- ================================================================
+         01. HERO SECTION — HIGH IMPACT & INTERACTIVE TOPOLOGY
+         ================================================================ -->
+    <section id="hero" class="hero-section">
+      <div class="container">
+        <div class="hero-grid">
           
-          <div class="cp-hero-role">
-            <span id="typewriterTarget">Agentic AI Engineer @ SmarterDx</span>
-            <span class="typing-cursor"></span>
-          </div>
-
-          <div class="cp-terminal-box">
-            <div class="cp-terminal-header">EXEC: NETRUNNER_CORE_SUMMARY.sh</div>
-            <div class="cp-terminal-body">
-              <p>
-                I build production agentic AI systems that land directly in live clinical workflows — the kind where output reliability, clinical grounding, and safety aren’t optional.
-              </p>
-              <p>
-                Currently an engineer on the core agentic AI platform at <strong>SmarterDx</strong>, architecting <strong>LangGraph clinical agents</strong> (SmarterNotes & SmarterUtilization) and DAG-orchestrated chart enrichment pipelines that turn full EHR records into evidence-backed clinical notes and medical-necessity justifications.
-              </p>
-              <p>
-                Specialized in multi-model AWS Bedrock infrastructure with model parallelism, custom <strong>Model Context Protocol (MCP)</strong> tooling for AI coding agents, and automated LLM-as-judge evaluation frameworks.
-              </p>
-            </div>
-          </div>
-
-          <div class="cp-hero-actions">
-            <a href="#uplink" class="cp-btn cp-btn-primary">
-              <i class="bi bi-broadcast"></i> INITIALIZE UPLINK
-            </a>
-            <a href="https://github.com/ashwin-srdy" target="_blank" rel="noopener noreferrer" class="cp-btn cp-btn-secondary">
-              <i class="bi bi-github"></i> GITHUB TERMINAL
-            </a>
-            <a href="https://www.linkedin.com/in/ashwin-srdy/" target="_blank" rel="noopener noreferrer" class="cp-btn cp-btn-ghost">
-              <i class="bi bi-linkedin"></i> LINKEDIN DOSSIER
-            </a>
-            <a href="https://linktr.ee/ashwin_srdy" target="_blank" rel="noopener noreferrer" class="cp-btn cp-btn-ghost">
-              <i class="bi bi-link-45deg"></i> LINKTREE DECK
-            </a>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- 02. SYSTEM TELEMETRY & ACTUAL ENGINEERING KPIS -->
-    <section id="telemetry" class="cp-section">
-      <div class="cp-section-header">
-        <h2 class="cp-section-title">
-          <span class="hex-tag">[02]</span> RUNTIME TELEMETRY & KPIS
-        </h2>
-        <span class="cp-section-subtitle">// PROVABLE_PRODUCTION_IMPACT</span>
-      </div>
-
-      <div class="cp-kpi-grid">
-        
-        <!-- KPI 1 -->
-        <div class="cp-kpi-card">
-          <div>
-            <span class="cp-kpi-badge">// INFRASTRUCTURE_LATENCY</span>
-            <div class="cp-kpi-value" data-target="50" data-prefix="-" data-suffix="%">-50%</div>
-            <div class="cp-kpi-label">AWS Bedrock Inference Latency</div>
-            <div class="cp-kpi-desc">
-              Reduced inference latency for real-time clinical decision support via model parallelism, candidate fallbacks, and vector database tuning.
-            </div>
-          </div>
-          <div class="cp-kpi-meter">
-            <div class="cp-kpi-fill" style="width: 50%;"></div>
-          </div>
-        </div>
-
-        <!-- KPI 2 -->
-        <div class="cp-kpi-card">
-          <div>
-            <span class="cp-kpi-badge">// AUTOMATION_FRAMEWORK</span>
-            <div class="cp-kpi-value" data-target="60" data-prefix="-" data-suffix="%">-60%</div>
-            <div class="cp-kpi-label">Manual Prompt-Eval Workload</div>
-            <div class="cp-kpi-desc">
-              Built scalable multi-metric agent evaluation benchmarking (semantic similarity, LLM-as-judge scoring, response length) for model swapping.
-            </div>
-          </div>
-          <div class="cp-kpi-meter">
-            <div class="cp-kpi-fill" style="width: 60%;"></div>
-          </div>
-        </div>
-
-        <!-- KPI 3 -->
-        <div class="cp-kpi-card">
-          <div>
-            <span class="cp-kpi-badge">// HARDWARE_ACCELERATION</span>
-            <div class="cp-kpi-value" data-target="400" data-prefix="+" data-suffix="%">+400%</div>
-            <div class="cp-kpi-label">GPU Training Efficiency</div>
-            <div class="cp-kpi-desc">
-              Accelerated Atrial Fibrillation ML model training from 13 hours down to 13 minutes using CuDA ML with 95% early diagnostic accuracy.
-            </div>
-          </div>
-          <div class="cp-kpi-meter">
-            <div class="cp-kpi-fill" style="width: 100%;"></div>
-          </div>
-        </div>
-
-        <!-- KPI 4 -->
-        <div class="cp-kpi-card">
-          <div>
-            <span class="cp-kpi-badge">// PIPELINE_EXECUTION</span>
-            <div class="cp-kpi-value" data-target="30" data-prefix="-" data-suffix="%">-30%</div>
-            <div class="cp-kpi-label">Airflow & OpenSearch Runtime</div>
-            <div class="cp-kpi-desc">
-              Optimized Airflow DAGs integrating OpenSearch and LLM pipelines for CDI query generation across 5+ client applications.
-            </div>
-          </div>
-          <div class="cp-kpi-meter">
-            <div class="cp-kpi-fill" style="width: 30%;"></div>
-          </div>
-        </div>
-
-        <!-- KPI 5 -->
-        <div class="cp-kpi-card">
-          <div>
-            <span class="cp-kpi-badge">// LEGAL_AI_AUTOMATION</span>
-            <div class="cp-kpi-value" data-target="40" data-prefix="-" data-suffix="%">-40%</div>
-            <div class="cp-kpi-label">Manual Research Work Slashed</div>
-            <div class="cp-kpi-desc">
-              Architected Neo Legal AI's RAG pipeline, semantic contract indexing, and summarization engine for enterprise early adopters.
-            </div>
-          </div>
-          <div class="cp-kpi-meter">
-            <div class="cp-kpi-fill" style="width: 40%;"></div>
-          </div>
-        </div>
-
-        <!-- KPI 6 -->
-        <div class="cp-kpi-card">
-          <div>
-            <span class="cp-kpi-badge">// DEVOPS_VELOCITY</span>
-            <div class="cp-kpi-value" data-target="83" data-prefix="-" data-suffix="%">-83%</div>
-            <div class="cp-kpi-label">Deployment Release Cycles</div>
-            <div class="cp-kpi-desc">
-              Containerized models with Docker and deployed on AWS EC2, slashing software release cycles from 6 hours down to 1 hour.
-            </div>
-          </div>
-          <div class="cp-kpi-meter">
-            <div class="cp-kpi-fill" style="width: 83%;"></div>
-          </div>
-        </div>
-
-        <!-- KPI 7 -->
-        <div class="cp-kpi-card">
-          <div>
-            <span class="cp-kpi-badge">// MODEL_TUNING</span>
-            <div class="cp-kpi-value" data-target="25" data-prefix="+" data-suffix="%">+25%</div>
-            <div class="cp-kpi-label">Contextual Accuracy Boost</div>
-            <div class="cp-kpi-desc">
-              Fine-tuned transformer models (BERT, GPT variants) on client datasets at Spotflock for specialized domain intelligence systems.
-            </div>
-          </div>
-          <div class="cp-kpi-meter">
-            <div class="cp-kpi-fill" style="width: 25%;"></div>
-          </div>
-        </div>
-
-        <!-- KPI 8 -->
-        <div class="cp-kpi-card">
-          <div>
-            <span class="cp-kpi-badge">// COMMUNITY_SKILLING</span>
-            <div class="cp-kpi-value" data-target="80" data-prefix="" data-suffix="+">80+</div>
-            <div class="cp-kpi-label">Engineers Mentored in ML</div>
-            <div class="cp-kpi-desc">
-              Led advanced hands-on machine learning bootcamps on Python, SQL, and deep neural architectures at The SmartBridge.
-            </div>
-          </div>
-          <div class="cp-kpi-meter">
-            <div class="cp-kpi-fill" style="width: 80%;"></div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- 03. CYBERWARE & TECH DECK -->
-    <section id="cyberware" class="cp-section">
-      <div class="cp-section-header">
-        <h2 class="cp-section-title">
-          <span class="hex-tag">[03]</span> CYBERWARE & SKILL TREE
-        </h2>
-        <span class="cp-section-subtitle">// NEURAL_IMPLANTS_&_STACK</span>
-      </div>
-
-      <div class="cp-skills-grid">
-        
-        <!-- Skill Branch 1 -->
-        <div class="cp-skill-branch">
-          <div class="cp-branch-title">
-            <i class="bi bi-diagram-3"></i> BRANCH 01: AGENTIC AI & ORCHESTRATION
-          </div>
-          <div class="cp-meter-group">
-            <div class="cp-meter-item">
-              <div class="cp-meter-header">
-                <span class="cp-meter-name">LangGraph & Multi-Agent Stategraphs</span>
-                <span class="cp-meter-val">96%</span>
+          <!-- Hero Left: Narrative & CTA -->
+          <div class="hero-content">
+            <div class="hero-badge-wrap">
+              <div class="status-badge">
+                <span class="status-pulse-dot"></span>
+                <span>Available for AI Engineering & Research Roles</span>
               </div>
-              <div class="cp-bar-outer"><div class="cp-bar-inner" style="width: 96%;"></div></div>
             </div>
-            <div class="cp-meter-item">
-              <div class="cp-meter-header">
-                <span class="cp-meter-name">Model Context Protocol (MCP) & Agent Tooling</span>
-                <span class="cp-meter-val">90%</span>
+
+            <h1 class="hero-title">
+              Engineering <span class="gradient-accent">Agentic AI</span> & Clinical Systems.
+            </h1>
+
+            <p class="hero-headline">
+              I’m <strong>Ashwin Kumar Sangareddypeta</strong> — an AI Engineer architecting autonomous multi-agent workflows, production LLM pipelines, and high-performance ML infrastructure.
+            </p>
+
+            <p class="hero-desc">
+              Bridging complex clinical workflows, business requirements, and fault-tolerant software engineering. Currently building core clinical agent orchestration with LangGraph, Model Context Protocol (MCP), and AWS Bedrock at SmarterDx.
+            </p>
+
+            <div class="hero-meta-strip">
+              <div class="hero-meta-item">
+                <i class="bi bi-geo-alt-fill"></i> Dallas, Texas
               </div>
-              <div class="cp-bar-outer"><div class="cp-bar-inner" style="width: 90%;"></div></div>
+              <div class="hero-meta-item">
+                <i class="bi bi-diagram-3-fill"></i> Multi-Agent StateGraphs
+              </div>
+              <div class="hero-meta-item">
+                <i class="bi bi-hospital-fill"></i> Healthcare & Clinical AI
+              </div>
+              <div class="hero-meta-item">
+                <i class="bi bi-cloud-check-fill"></i> AWS Bedrock
+              </div>
             </div>
-            <div class="cp-meter-item">
-              <div class="cp-meter-header">
-                <span class="cp-meter-name">RAG, Grounding & Evidence Citation</span>
-                <span class="cp-meter-val">94%</span>
-              </div>
-              <div class="cp-bar-outer"><div class="cp-bar-inner" style="width: 94%;"></div></div>
+
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary">
+                Explore Projects <i class="bi bi-arrow-right"></i>
+              </a>
+              <a href="#resumeModal" class="btn btn-secondary open-resume-btn">
+                <i class="bi bi-file-earmark-text"></i> View Resume
+              </a>
+              <a href="#contact" class="btn btn-ghost">
+                Let's Talk <i class="bi bi-chat-dots"></i>
+              </a>
             </div>
-            <div class="cp-meter-item">
-              <div class="cp-meter-header">
-                <span class="cp-meter-name">LLM Safety Guardrails & Adversarial Defense</span>
-                <span class="cp-meter-val">92%</span>
-              </div>
-              <div class="cp-bar-outer"><div class="cp-bar-inner" style="width: 92%;"></div></div>
+
+            <div class="hero-socials">
+              <a href="https://github.com/ashwin-srdy" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="GitHub Profile">
+                <i class="bi bi-github"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/ashwin-srdy/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="LinkedIn Profile">
+                <i class="bi bi-linkedin"></i>
+              </a>
+              <a href="https://linktr.ee/ashwin_srdy" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="Linktree Portfolio">
+                <i class="bi bi-link-45deg"></i>
+              </a>
+              <a href="https://medium.com/@ashwinsang1904" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="Medium Articles">
+                <i class="bi bi-medium"></i>
+              </a>
+              <a href="mailto:ashwinsang.work@gmail.com" class="social-icon-btn" title="Email Ashwin">
+                <i class="bi bi-envelope-fill"></i>
+              </a>
             </div>
           </div>
-        </div>
 
-        <!-- Skill Branch 2 -->
-        <div class="cp-skill-branch">
-          <div class="cp-branch-title">
-            <i class="bi bi-cpu"></i> BRANCH 02: CLINICAL ML & INFRASTRUCTURE
-          </div>
-          <div class="cp-meter-group">
-            <div class="cp-meter-item">
-              <div class="cp-meter-header">
-                <span class="cp-meter-name">DAG Pre-Gen Pipelines & Chart Enrichment</span>
-                <span class="cp-meter-val">94%</span>
+          <!-- Hero Right: Interactive Agent Topology Canvas -->
+          <div class="hero-visual-card">
+            <div class="hero-visual-header">
+              <div class="visual-header-left">
+                <div class="visual-window-dots">
+                  <span class="window-dot red"></span>
+                  <span class="window-dot yellow"></span>
+                  <span class="window-dot green"></span>
+                </div>
+                <span class="visual-title">MULTI_AGENT_TOPOLOGY // LIVE ENGINE</span>
               </div>
-              <div class="cp-bar-outer"><div class="cp-bar-inner" style="width: 94%;"></div></div>
+              <span class="visual-header-badge">INTERACTIVE</span>
             </div>
-            <div class="cp-meter-item">
-              <div class="cp-meter-header">
-                <span class="cp-meter-name">AWS Bedrock Model Parallelism & Routing</span>
-                <span class="cp-meter-val">88%</span>
-              </div>
-              <div class="cp-bar-outer"><div class="cp-bar-inner" style="width: 88%;"></div></div>
+
+            <div class="agent-canvas-container">
+              <canvas id="agentTopologyCanvas"></canvas>
             </div>
-            <div class="cp-meter-item">
-              <div class="cp-meter-header">
-                <span class="cp-meter-name">Apache Airflow, OpenSearch & Vector DBs</span>
-                <span class="cp-meter-val">88%</span>
+
+            <div class="canvas-legend">
+              <div class="legend-item">
+                <span class="legend-dot orchestrator"></span> Orchestrator & Infra
               </div>
-              <div class="cp-bar-outer"><div class="cp-bar-inner" style="width: 88%;"></div></div>
-            </div>
-            <div class="cp-meter-item">
-              <div class="cp-meter-header">
-                <span class="cp-meter-name">FastAPI, Docker & Containerized Microservices</span>
-                <span class="cp-meter-val">90%</span>
+              <div class="legend-item">
+                <span class="legend-dot clinical"></span> Clinical RAG & EHR
               </div>
-              <div class="cp-bar-outer"><div class="cp-bar-inner" style="width: 90%;"></div></div>
+              <div class="legend-item">
+                <span class="legend-dot evaluator"></span> Evaluator & Guardrails
+              </div>
             </div>
           </div>
-        </div>
 
-      </div>
-
-      <!-- Tech Deck Grid -->
-      <div class="cp-tech-grid">
-        <div class="cp-tech-card">
-          <iconify-icon icon="simple-icons:langchain"></iconify-icon>
-          <span>LangGraph</span>
-        </div>
-        <div class="cp-tech-card">
-          <iconify-icon icon="ri:cpu-line"></iconify-icon>
-          <span>MCP Tooling</span>
-        </div>
-        <div class="cp-tech-card">
-          <iconify-icon icon="skill-icons:aws-light"></iconify-icon>
-          <span>AWS Bedrock</span>
-        </div>
-        <div class="cp-tech-card">
-          <iconify-icon icon="skill-icons:python-dark"></iconify-icon>
-          <span>Python</span>
-        </div>
-        <div class="cp-tech-card">
-          <iconify-icon icon="skill-icons:fastapi"></iconify-icon>
-          <span>FastAPI</span>
-        </div>
-        <div class="cp-tech-card">
-          <iconify-icon icon="skill-icons:docker"></iconify-icon>
-          <span>Docker</span>
-        </div>
-        <div class="cp-tech-card">
-          <iconify-icon icon="skill-icons:apacheairflow"></iconify-icon>
-          <span>Apache Airflow</span>
-        </div>
-        <div class="cp-tech-card">
-          <iconify-icon icon="logos:opensearch"></iconify-icon>
-          <span>OpenSearch</span>
-        </div>
-        <div class="cp-tech-card">
-          <iconify-icon icon="skill-icons:pytorch-light"></iconify-icon>
-          <span>PyTorch</span>
-        </div>
-        <div class="cp-tech-card">
-          <iconify-icon icon="devicon:scikitlearn"></iconify-icon>
-          <span>CuML / Sklearn</span>
-        </div>
-        <div class="cp-tech-card">
-          <iconify-icon icon="logos:tableau-icon"></iconify-icon>
-          <span>Tableau</span>
-        </div>
-        <div class="cp-tech-card">
-          <iconify-icon icon="devicon:linux"></iconify-icon>
-          <span>Linux Bash</span>
         </div>
       </div>
     </section>
 
-    <!-- 04. MISSIONS (WORK EXPERIENCE) -->
-    <section id="missions" class="cp-section">
-      <div class="cp-section-header">
-        <h2 class="cp-section-title">
-          <span class="hex-tag">[04]</span> MISSION LOG & CONTRACTS
-        </h2>
-        <span class="cp-section-subtitle">// CAREER_TIMELINE</span>
-      </div>
-
-      <div class="cp-timeline">
+    <!-- ================================================================
+         02. ABOUT ME — STORYTELLING & ENGINEERING PHILOSOPHY
+         ================================================================ -->
+    <section id="about" class="section">
+      <div class="container">
         
-        <!-- Mission 1: SmarterDx -->
-        <div class="cp-mission-card">
-          <div class="cp-mission-node"></div>
-          <div class="cp-mission-header">
-            <div>
-              <div class="cp-mission-company">SmarterDx</div>
-              <div class="cp-mission-role">Software Engineer - ML/AI Engineering</div>
-              <div class="cp-mission-loc">Dallas, Texas, United States</div>
-            </div>
-            <div class="cp-mission-date">JUNE 2025 – PRESENT</div>
-          </div>
-          <ul class="cp-mission-bullets">
-            <li><strong>SmarterNotes – Core Agentic AI Engineer:</strong> Built LangGraph agents for the EHR-embedded product that generates clinically robust notes from the H&P through the discharge summary, reasoning over the patient's full history, labs, medications, vitals, and flowsheets to draft complete, compliant patient stories and surface evidence-backed diagnosis suggestions.</li>
-            <li><strong>SmarterUtilization – Core Agentic AI Engineer:</strong> Built agents that surface relevant clinical evidence at the point of care to justify medical necessity and level-of-care decisions, matching patient details against clinical guidelines and inpatient criteria.</li>
-            <li><strong>DAG Pre-Generation Pipelines:</strong> Designed DAG-based chart assembly pipelines extracting, structuring, and indexing clinical evidence ahead of generation — enabling LangGraph agents to run in real time with grounded outputs citing specific labs, notes, and vitals.</li>
-            <li><strong>Clinical Guardrails:</strong> Partnered with clinicians, CDI specialists, and utilization reviewers to define clinical analysis logic, translating chart-review feedback into agent nodes, tools, prompts, and safety guardrails.</li>
-            <li><strong>Agent Evaluation Framework:</strong> Built scalable evaluation benchmarking with multi-metric analysis (semantic similarity, LLM-as-judge scoring, response length), cutting manual prompt-optimization workload by <strong>60%</strong>.</li>
-            <li><strong>Airflow & OpenSearch:</strong> Optimized Airflow DAGs integrating OpenSearch and LLM pipelines for CDI query generation, cutting workflow execution time by <strong>30%</strong> across 5+ client applications.</li>
-            <li><strong>AWS Bedrock Infrastructure:</strong> Architected multi-modal GenAI applications with model parallelism, integrated candidate fallback models, and reduced real-time inference latency by <strong>50%</strong>.</li>
-            <li><strong>Custom MCP Tool Connectors:</strong> Created custom Model Context Protocol (MCP) connectors for AI coding tools including Claude Code and Codex, accelerating developer agent workflows.</li>
-          </ul>
+        <div class="section-header">
+          <span class="section-tag">About & Background</span>
+          <h2 class="section-title">Where Clinical Rigor Meets Agentic Architecture.</h2>
+          <p class="section-subtitle">
+            I build systems where hallucinations aren't just annoying quirks — they are unacceptable.
+          </p>
         </div>
 
-        <!-- Mission 2: Pieces Technologies -->
-        <div class="cp-mission-card">
-          <div class="cp-mission-node"></div>
-          <div class="cp-mission-header">
-            <div>
-              <div class="cp-mission-company">Pieces Technologies</div>
-              <div class="cp-mission-role">Quantitative Scientist / AI Engineer</div>
-              <div class="cp-mission-loc">Irving, Texas, United States</div>
-            </div>
-            <div class="cp-mission-date">AUGUST 2024 – MAY 2025</div>
-          </div>
-          <ul class="cp-mission-bullets">
-            <li><strong>HL7 FHIR Patient Simulation Framework:</strong> Revamped Python-based patient data simulation framework using LLMs to generate realistic HL7 FHIR datasets for NIH-funded cancer research, enabling rapid, reproducible test data across clinical studies.</li>
-            <li><strong>Pieces in Your Pocket Guardrails:</strong> Designed safety and workflow guardrails for conversational AI, enabling EHR updates and instant answers to clinical questions while streamlining after-hours documentation.</li>
-            <li><strong>AWS Bedrock Optimization:</strong> Architected and deployed multi-modal GenAI applications using AWS Bedrock with model parallelism, achieving a <strong>50%</strong> reduction in inference latency.</li>
-          </ul>
-        </div>
-
-        <!-- Mission 3: Spotflock Technologies -->
-        <div class="cp-mission-card">
-          <div class="cp-mission-node"></div>
-          <div class="cp-mission-header">
-            <div>
-              <div class="cp-mission-company">Spotflock Technologies</div>
-              <div class="cp-mission-role">Data Science Engineer</div>
-              <div class="cp-mission-loc">Hyderabad, Telangana, India</div>
-            </div>
-            <div class="cp-mission-date">MAY 2023 – SEPTEMBER 2023</div>
-          </div>
-          <ul class="cp-mission-bullets">
-            <li><strong>LLM Applications & Fine-Tuning:</strong> Built LLM applications with Hugging Face, GPT-3.5, and LangChain; fine-tuned transformers (BERT, GPT variants), improving contextual accuracy by <strong>25%</strong>.</li>
-            <li><strong>GolfGPT Computer Vision:</strong> Built golf posture estimation features using MediaPipe pose keypoint detection and joint-angle analysis to deliver real-time swing feedback.</li>
-            <li><strong>Neo Legal AI:</strong> Designed and prototyped a Retrieval-Augmented Generation (RAG) agent for legal document indexing, semantic search, and contract analysis, reducing manual legal research work by <strong>40%</strong>.</li>
-            <li><strong>FastAPI & Docker:</strong> Constructed robust RESTful APIs using Flask, FastAPI, and Docker on AWS/Azure, improving data exchange efficiency by <strong>25%</strong>.</li>
-          </ul>
-        </div>
-
-        <!-- Mission 4: The SmartBridge -->
-        <div class="cp-mission-card">
-          <div class="cp-mission-node"></div>
-          <div class="cp-mission-header">
-            <div>
-              <div class="cp-mission-company">The SmartBridge</div>
-              <div class="cp-mission-role">Machine Learning Engineer</div>
-              <div class="cp-mission-loc">Hyderabad, Telangana, India</div>
-            </div>
-            <div class="cp-mission-date">FEBRUARY 2023 – JUNE 2023</div>
-          </div>
-          <ul class="cp-mission-bullets">
-            <li>Developed machine learning models and interactive Tableau dashboards that boosted course sales by <strong>20%</strong> and improved business profitability by <strong>30%</strong>.</li>
-            <li>Led advanced ML bootcamps for <strong>80+</strong> learners covering Python, SQL, and deep learning architectures with hands-on industry tools.</li>
-          </ul>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- 05. CYBER SHARDS (PROJECTS) -->
-    <section id="shards" class="cp-section">
-      <div class="cp-section-header">
-        <h2 class="cp-section-title">
-          <span class="hex-tag">[05]</span> CYBER SHARDS & ARCHITECTURE
-        </h2>
-        <span class="cp-section-subtitle">// WEAPONS_OF_CODE</span>
-      </div>
-
-      <!-- Filter Controls -->
-      <div class="cp-filter-bar">
-        <button class="cp-filter-btn active" data-filter="all">ALL SHARDS</button>
-        <button class="cp-filter-btn" data-filter="agentic">AGENTIC AI</button>
-        <button class="cp-filter-btn" data-filter="ml">MACHINE LEARNING</button>
-        <button class="cp-filter-btn" data-filter="cv">COMPUTER VISION</button>
-        <button class="cp-filter-btn" data-filter="systems">SYSTEMS & APIS</button>
-      </div>
-
-      <div class="cp-shards-grid">
-        
-        <!-- Shard 1: Agentic Virtual Travel Assistant -->
-        <div class="cp-shard-card" data-category="agentic systems">
-          <div class="cp-shard-thumb-wrap">
-            <img src="assets/img/portfolio/portfolio-1.jpg" alt="Agentic Virtual Travel Assistant" class="cp-shard-img">
-            <span class="cp-shard-category">// AGENTIC_AI</span>
-          </div>
-          <div class="cp-shard-body">
-            <h3 class="cp-shard-title">Agentic Virtual Travel Assistant</h3>
-            <p class="cp-shard-desc">
-              LangGraph-based Deep Agent planning multi-day travel itineraries via live web sources (flight APIs, hotels, events) with streaming and LiveKit voice-to-voice interaction.
-            </p>
-            <div class="cp-shard-tags">
-              <span class="cp-shard-tag">LangGraph</span>
-              <span class="cp-shard-tag">LiveKit</span>
-              <span class="cp-shard-tag">Open-WebUI</span>
-              <span class="cp-shard-tag">Deep Agent</span>
-            </div>
-            <div class="cp-shard-actions">
-              <a href="https://github.com/ashwin-srdy" target="_blank" rel="noopener noreferrer" class="cp-shard-link">
-                <i class="bi bi-github"></i> REPO TERMINAL
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Shard 2: OpenClaw Marketing Automation Bot -->
-        <div class="cp-shard-card" data-category="agentic systems">
-          <div class="cp-shard-thumb-wrap">
-            <img src="assets/img/portfolio/portfolio-2.jpg" alt="OpenClaw Marketing Automation" class="cp-shard-img">
-            <span class="cp-shard-category">// AUTOMATION_BOT</span>
-          </div>
-          <div class="cp-shard-body">
-            <h3 class="cp-shard-title">OpenClaw Marketing Bot</h3>
-            <p class="cp-shard-desc">
-              Autonomous marketing automation agent leveraging LLMs on Google Cloud to streamline cold emails, lead enrichment, scheduling, and personalized outreach for the CMO.
-            </p>
-            <div class="cp-shard-tags">
-              <span class="cp-shard-tag">OpenClaw</span>
-              <span class="cp-shard-tag">Google Cloud</span>
-              <span class="cp-shard-tag">LLMs</span>
-              <span class="cp-shard-tag">Outreach AI</span>
-            </div>
-            <div class="cp-shard-actions">
-              <a href="https://github.com/ashwin-srdy" target="_blank" rel="noopener noreferrer" class="cp-shard-link">
-                <i class="bi bi-github"></i> REPO TERMINAL
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Shard 3: Atrial Fibrillation Detection -->
-        <div class="cp-shard-card" data-category="ml systems">
-          <div class="cp-shard-thumb-wrap">
-            <img src="assets/img/portfolio/portfolio-details_DEFO-1.jpeg" alt="Atrial Fibrillation Detection" class="cp-shard-img">
-            <span class="cp-shard-category">// HEALTHCARE_ML</span>
-          </div>
-          <div class="cp-shard-body">
-            <h3 class="cp-shard-title">Atrial Fibrillation Detection</h3>
-            <p class="cp-shard-desc">
-              Predictive analytics solution boosting early diagnosis accuracy by 15%. Trained CuDA ML GPU-accelerated models, slashing training time by 400% (13h → 13min) with 95% accuracy.
-            </p>
-            <div class="cp-shard-tags">
-              <span class="cp-shard-tag">CuDA ML</span>
-              <span class="cp-shard-tag">Docker</span>
-              <span class="cp-shard-tag">AWS EC2</span>
-              <span class="cp-shard-tag">Random Forest</span>
-            </div>
-            <div class="cp-shard-actions">
-              <a href="https://github.com/ashwin-srdy" target="_blank" rel="noopener noreferrer" class="cp-shard-link">
-                <i class="bi bi-github"></i> REPO TERMINAL
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Shard 4: Face Recognition Attendance API -->
-        <div class="cp-shard-card" data-category="cv systems">
-          <div class="cp-shard-thumb-wrap">
-            <img src="assets/img/portfolio/portfolio-details_FRAPI-1.jpg" alt="Face Recognition Attendance API" class="cp-shard-img">
-            <span class="cp-shard-category">// COMPUTER_VISION</span>
-          </div>
-          <div class="cp-shard-body">
-            <h3 class="cp-shard-title">Biometric Attendance API</h3>
-            <p class="cp-shard-desc">
-              Real-time face recognition attendance system built on FaceNet, MTCNN, and FastAPI. Integrated into Raspberry Pi 3 hardware, achieving a 50% performance efficiency boost.
-            </p>
-            <div class="cp-shard-tags">
-              <span class="cp-shard-tag">FaceNet</span>
-              <span class="cp-shard-tag">MTCNN</span>
-              <span class="cp-shard-tag">FastAPI</span>
-              <span class="cp-shard-tag">Raspberry Pi</span>
-            </div>
-            <div class="cp-shard-actions">
-              <a href="https://github.com/ashwin-srdy" target="_blank" rel="noopener noreferrer" class="cp-shard-link">
-                <i class="bi bi-github"></i> REPO TERMINAL
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Shard 5: GolfGPT Computer Vision -->
-        <div class="cp-shard-card" data-category="cv ml">
-          <div class="cp-shard-thumb-wrap">
-            <img src="assets/img/portfolio/portfolio-3.jpg" alt="GolfGPT Posture Analysis" class="cp-shard-img">
-            <span class="cp-shard-category">// SPATIAL_AI</span>
-          </div>
-          <div class="cp-shard-body">
-            <h3 class="cp-shard-title">GolfGPT Posture Coach</h3>
-            <p class="cp-shard-desc">
-              Computer vision swing analysis system using MediaPipe pose keypoint tracking and geometric joint-angle calculation to deliver real-time personalized posture corrections.
-            </p>
-            <div class="cp-shard-tags">
-              <span class="cp-shard-tag">MediaPipe</span>
-              <span class="cp-shard-tag">OpenCV</span>
-              <span class="cp-shard-tag">Spatial AI</span>
-              <span class="cp-shard-tag">SportTech</span>
-            </div>
-            <div class="cp-shard-actions">
-              <a href="https://github.com/ashwin-srdy" target="_blank" rel="noopener noreferrer" class="cp-shard-link">
-                <i class="bi bi-github"></i> REPO TERMINAL
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Shard 6: Neo Legal AI RAG Platform -->
-        <div class="cp-shard-card" data-category="agentic systems">
-          <div class="cp-shard-thumb-wrap">
-            <img src="assets/img/portfolio/portfolio-4.jpg" alt="Neo Legal AI" class="cp-shard-img">
-            <span class="cp-shard-category">// RAG_SYSTEM</span>
-          </div>
-          <div class="cp-shard-body">
-            <h3 class="cp-shard-title">Neo Legal AI Intelligence</h3>
-            <p class="cp-shard-desc">
-              RAG platform for legal document semantic indexing, clause extraction, and contract summarization, reducing manual research time by 40% for early enterprise legal adopters.
-            </p>
-            <div class="cp-shard-tags">
-              <span class="cp-shard-tag">RAG</span>
-              <span class="cp-shard-tag">Vector Index</span>
-              <span class="cp-shard-tag">LLMs</span>
-              <span class="cp-shard-tag">Legal Tech</span>
-            </div>
-            <div class="cp-shard-actions">
-              <a href="https://github.com/ashwin-srdy" target="_blank" rel="noopener noreferrer" class="cp-shard-link">
-                <i class="bi bi-github"></i> REPO TERMINAL
-              </a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- 06. ACADEMIA & PERKS -->
-    <section id="perks" class="cp-section">
-      <div class="cp-section-header">
-        <h2 class="cp-section-title">
-          <span class="hex-tag">[06]</span> ACADEMIA & VERIFIED PERKS
-        </h2>
-        <span class="cp-section-subtitle">// CREDENTIALS_&_AWARDS</span>
-      </div>
-
-      <div class="cp-perks-grid">
-        
-        <div class="cp-perk-card">
-          <div class="cp-perk-icon"><i class="bi bi-mortarboard"></i></div>
-          <div>
-            <h3 class="cp-perk-title">M.S. in IT & Management</h3>
-            <div class="cp-perk-issuer">The University of Texas at Dallas // May 2025</div>
-            <p class="cp-perk-detail">
-              <strong>GPA: 3.58</strong> | Dean's Excellence Scholarship Recipient | Graduate Student Assembly Student Representative. Focus: AI, Advanced Statistics, Database Warehousing.
-            </p>
-          </div>
-        </div>
-
-        <div class="cp-perk-card">
-          <div class="cp-perk-icon"><i class="bi bi-cpu"></i></div>
-          <div>
-            <h3 class="cp-perk-title">B.Tech in Computer Science</h3>
-            <div class="cp-perk-issuer">Institute of Aeronautical Engineering // July 2023</div>
-            <p class="cp-perk-detail">
-              <strong>GPA: 3.5</strong> | 2022 Interdisciplinary Project Expo Winner | Secured seed funding for 2 startup initiatives. Focus: Machine Learning, Data Structures, AI.
-            </p>
-          </div>
-        </div>
-
-        <div class="cp-perk-card">
-          <div class="cp-perk-icon"><i class="bi bi-shield-check"></i></div>
-          <div>
-            <h3 class="cp-perk-title">Six Sigma Yellow Belt</h3>
-            <div class="cp-perk-issuer">6sigmastudy // Global Quality Standard</div>
-            <p class="cp-perk-detail">
-              Certified in operational rigor, lean pipeline operations, root-cause diagnostics, and defect reduction in software pipelines.
-            </p>
-          </div>
-        </div>
-
-        <div class="cp-perk-card">
-          <div class="cp-perk-icon"><i class="bi bi-cloud-check"></i></div>
-          <div>
-            <h3 class="cp-perk-title">AWS Machine Learning Foundations</h3>
-            <div class="cp-perk-issuer">Udacity & AWS // Verified Badge</div>
-            <p class="cp-perk-detail">
-              Cloud machine learning pipelines, SageMaker, deep learning workflows, and distributed model deployment on AWS.
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- 07. TRANSMISSION UPLINK (CONTACT) -->
-    <section id="uplink" class="cp-section">
-      <div class="cp-section-header">
-        <h2 class="cp-section-title">
-          <span class="hex-tag">[07]</span> ENCRYPTED TRANSMISSION UPLINK
-        </h2>
-        <span class="cp-section-subtitle">// INITIALIZE_COMMS</span>
-      </div>
-
-      <div class="cp-contact-grid">
-        
-        <!-- Contact Terminal Form -->
-        <div class="cp-terminal-form">
-          <div class="cp-terminal-header">COMMS_TERMINAL // RELAY_PORT_8080</div>
+        <div class="about-grid">
           
-          <form id="cyberContactForm">
-            <div class="cp-form-group">
-              <label class="cp-form-label">// OPERATOR CALLSIGN</label>
-              <input type="text" class="cp-input" placeholder="Your name or agent handle" required>
+          <!-- Portrait Card -->
+          <div class="about-photo-wrapper">
+            <div class="about-photo-frame">
+              <img src="assets/img/me.jpg" alt="Ashwin Kumar Sangareddypeta" class="about-photo">
             </div>
+            <div class="about-photo-tag">
+              <span class="about-photo-name">Ashwin Kumar Sangareddypeta</span>
+              <span class="about-photo-role">M.S. IT & Management (UT Dallas) • AI Engineer</span>
+            </div>
+          </div>
+
+          <!-- Content Narrative -->
+          <div class="about-text-content">
+            <div class="about-content-lead">
+              I am an AI Engineer focused on turning cutting-edge language model capabilities into deterministic, production-grade applications that solve high-stakes business and clinical problems.
+            </div>
+
+            <div class="about-paragraphs">
+              <p>
+                My work centers on <strong>multi-agent architectures, Retrieval-Augmented Generation (RAG)</strong>, and distributed AI infrastructure. At <strong>SmarterDx</strong>, I engineer LangGraph-driven clinical agents (such as SmarterNotes & SmarterUtilization) and DAG-orchestrated chart enrichment pipelines that turn massive, unstructured Electronic Health Records (EHR) into evidence-grounded clinical documentation and medical-necessity justifications.
+              </p>
+              <p>
+                Prior to this at <strong>Pieces Technologies</strong>, I overhauled LLM simulation frameworks for NIH-funded clinical trials, established safety guardrails for bedside conversational AI, and engineered AWS Bedrock model parallelism that reduced inference latency by <strong>50%</strong>.
+              </p>
+              <p>
+                Whether fine-tuning transformers on domain-specific corpora, slashing training times from <strong>13 hours down to 13 minutes</strong> via CuDA ML GPU acceleration, or creating custom Model Context Protocol (MCP) tooling, I focus on systems that are measurable, observable, and built to scale.
+              </p>
+            </div>
+
+            <!-- 4 Architectural Pillars -->
+            <div class="about-pillars-grid">
+              
+              <div class="pillar-card">
+                <i class="bi bi-diagram-3-fill pillar-icon"></i>
+                <h3 class="pillar-title">Agentic Multi-Agent Systems</h3>
+                <p class="pillar-desc">
+                  Building stateful, cyclical agent graphs with LangGraph, deterministic fallback policies, and MCP tooling.
+                </p>
+              </div>
+
+              <div class="pillar-card">
+                <i class="bi bi-heart-pulse-fill pillar-icon"></i>
+                <h3 class="pillar-title">Healthcare & Clinical Workflows</h3>
+                <p class="pillar-desc">
+                  Transforming full EHR charts into clinical notes with paragraph-exact citations, HL7 FHIR pipelines, and CDI queries.
+                </p>
+              </div>
+
+              <div class="pillar-card">
+                <i class="bi bi-speedometer2 pillar-icon"></i>
+                <h3 class="pillar-title">Latency & Cost Optimization</h3>
+                <p class="pillar-desc">
+                  Multi-model parallel routing on AWS Bedrock, CuDA ML GPU acceleration, and vector database index tuning.
+                </p>
+              </div>
+
+              <div class="pillar-card">
+                <i class="bi bi-shield-check pillar-icon"></i>
+                <h3 class="pillar-title">Evaluation & Guardrails</h3>
+                <p class="pillar-desc">
+                  Automated LLM-as-a-judge benchmarking, adversarial defenses, and observability via Langfuse and Arize Phoenix.
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================================
+         03. IMPACT DASHBOARD — VERIFIED PRODUCTION KPIS
+         ================================================================ -->
+    <section id="impact" class="section" style="background: rgba(14, 18, 26, 0.4);">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">Runtime Telemetry & Impact</span>
+          <h2 class="section-title">Measurable Engineering Outcomes.</h2>
+          <p class="section-subtitle">
+            Every metric below reflects real, verified production optimizations achieved across enterprise healthcare and machine learning systems.
+          </p>
+        </div>
+
+        <div class="impact-dashboard-grid">
+          
+          <!-- Metric 1: Bedrock Latency -->
+          <div class="metric-card">
+            <div>
+              <div class="metric-header">
+                <span class="metric-tag">AWS Bedrock Infra</span>
+                <div class="metric-icon-wrap"><i class="bi bi-lightning-charge-fill"></i></div>
+              </div>
+              <div class="metric-value-wrap">
+                <div class="metric-value" data-target="50" data-prefix="-" data-suffix="%">-50%</div>
+              </div>
+              <div class="metric-label">Inference Latency Reduction</div>
+              <p class="metric-description">
+                Halved response latency for real-time clinical decision support through Bedrock model parallelism, candidate model fallbacks, and vector search optimizations.
+              </p>
+            </div>
+            <div class="metric-bar-bg">
+              <div class="metric-bar-fill" style="width: 50%;"></div>
+            </div>
+          </div>
+
+          <!-- Metric 2: Prompt-Eval Workload -->
+          <div class="metric-card">
+            <div>
+              <div class="metric-header">
+                <span class="metric-tag">Evaluation Automation</span>
+                <div class="metric-icon-wrap"><i class="bi bi-cpu-fill"></i></div>
+              </div>
+              <div class="metric-value-wrap">
+                <div class="metric-value" data-target="60" data-prefix="-" data-suffix="%">-60%</div>
+              </div>
+              <div class="metric-label">Manual Prompt-Eval Workload Slashed</div>
+              <p class="metric-description">
+                Built multi-metric agent evaluation frameworks (semantic similarity, LLM-as-judge scoring, response length) enabling rapid model testing and swapping.
+              </p>
+            </div>
+            <div class="metric-bar-bg">
+              <div class="metric-bar-fill" style="width: 60%;"></div>
+            </div>
+          </div>
+
+          <!-- Metric 3: CuDA ML Acceleration -->
+          <div class="metric-card">
+            <div>
+              <div class="metric-header">
+                <span class="metric-tag">GPU Acceleration</span>
+                <div class="metric-icon-wrap"><i class="bi bi-gpu-card"></i></div>
+              </div>
+              <div class="metric-value-wrap">
+                <div class="metric-value" data-target="400" data-prefix="+" data-suffix="%">+400%</div>
+              </div>
+              <div class="metric-label">13 Hours to 13 Minutes ML Training</div>
+              <p class="metric-description">
+                Accelerated model training duration for Atrial Fibrillation detection from 13 hours to 13 minutes using CuDA ML (cuML) on GPU instances.
+              </p>
+            </div>
+            <div class="metric-bar-bg">
+              <div class="metric-bar-fill" style="width: 100%;"></div>
+            </div>
+          </div>
+
+          <!-- Metric 4: Airflow / OpenSearch DAG -->
+          <div class="metric-card">
+            <div>
+              <div class="metric-header">
+                <span class="metric-tag">Data Pipelines</span>
+                <div class="metric-icon-wrap"><i class="bi bi-diagram-2-fill"></i></div>
+              </div>
+              <div class="metric-value-wrap">
+                <div class="metric-value" data-target="30" data-prefix="-" data-suffix="%">-30%</div>
+              </div>
+              <div class="metric-label">DAG Execution Runtime Cut</div>
+              <p class="metric-description">
+                Streamlined Apache Airflow DAGs integrating OpenSearch vector indexing and LLM pipelines for clinical query generation across 5+ client health systems.
+              </p>
+            </div>
+            <div class="metric-bar-bg">
+              <div class="metric-bar-fill" style="width: 30%;"></div>
+            </div>
+          </div>
+
+          <!-- Metric 5: Diagnostic Accuracy -->
+          <div class="metric-card">
+            <div>
+              <div class="metric-header">
+                <span class="metric-tag">Clinical Analytics</span>
+                <div class="metric-icon-wrap"><i class="bi bi-activity"></i></div>
+              </div>
+              <div class="metric-value-wrap">
+                <div class="metric-value" data-target="95" data-prefix="" data-suffix="%">95%</div>
+              </div>
+              <div class="metric-label">Early AFib Diagnostic Accuracy</div>
+              <p class="metric-description">
+                Trained high-precision machine learning models on physiological ECG datasets, boosting early clinical identification by 15% to 95% total accuracy.
+              </p>
+            </div>
+            <div class="metric-bar-bg">
+              <div class="metric-bar-fill" style="width: 95%;"></div>
+            </div>
+          </div>
+
+          <!-- Metric 6: Mentorship & Skilling -->
+          <div class="metric-card">
+            <div>
+              <div class="metric-header">
+                <span class="metric-tag">Technical Leadership</span>
+                <div class="metric-icon-wrap"><i class="bi bi-people-fill"></i></div>
+              </div>
+              <div class="metric-value-wrap">
+                <div class="metric-value" data-target="80" data-prefix="" data-suffix="+">80+</div>
+              </div>
+              <div class="metric-label">Engineers Mentored in Machine Learning</div>
+              <p class="metric-description">
+                Conducted deep-dive training on Python, SQL, and deep neural network architectures, guiding 80+ aspiring engineers through hands-on project deployment.
+              </p>
+            </div>
+            <div class="metric-bar-bg">
+              <div class="metric-bar-fill" style="width: 80%;"></div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================================
+         04. EXPERIENCE — INTERACTIVE CAREER TIMELINE
+         ================================================================ -->
+    <section id="experience" class="section">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">Career History</span>
+          <h2 class="section-title">Production Experience & Engineering Roles.</h2>
+          <p class="section-subtitle">
+            A track record of shipping agentic systems, medical AI, and cloud software directly into real production environments.
+          </p>
+        </div>
+
+        <div class="timeline-container">
+          <div class="timeline-track"></div>
+          
+          <div class="timeline-items">
+
+            <!-- Role 1: SmarterDx -->
+            <div class="timeline-item">
+              <div class="timeline-node-marker"></div>
+              <div class="timeline-card">
+                <div class="timeline-header-top">
+                  <div>
+                    <h3 class="timeline-org">
+                      SmarterDx
+                      <span class="timeline-badge current">Core Agentic Platform</span>
+                    </h3>
+                    <div class="timeline-role">AI Engineer (Agentic AI)</div>
+                    <div class="timeline-location">
+                      <i class="bi bi-geo-alt"></i> Dallas, TX, United States
+                    </div>
+                  </div>
+                  <span class="timeline-period">Recent / Ongoing</span>
+                </div>
+
+                <ul class="timeline-bullets">
+                  <li class="timeline-bullet">
+                    <strong>LangGraph Clinical Agents:</strong> Architected clinical agents (SmarterNotes & SmarterUtilization) and DAG-driven chart enrichment pipelines that turn full EHR records into evidence-grounded clinical notes and medical-necessity justifications.
+                  </li>
+                  <li class="timeline-bullet">
+                    <strong>Airflow & OpenSearch Pipeline Optimization:</strong> Streamlined Airflow DAGs integrating OpenSearch and LLM pipelines for CDI query generation, cutting execution time by <strong>30%</strong> across 5+ client applications.
+                  </li>
+                  <li class="timeline-bullet">
+                    <strong>AWS Bedrock Latency Optimization:</strong> Architected multi-modal GenAI applications with model parallelism and candidate fallbacks, cutting real-time inference latency by <strong>50%</strong>.
+                  </li>
+                  <li class="timeline-bullet">
+                    <strong>Automated LLM Evaluation:</strong> Designed automated LLM-as-judge evaluation frameworks, slashing manual prompt evaluation workload by <strong>60%</strong>.
+                  </li>
+                  <li class="timeline-bullet">
+                    <strong>MCP Tool Connectors:</strong> Created custom Model Context Protocol (MCP) connectors for AI coding agents including Claude Code and Codex to accelerate developer workflows.
+                  </li>
+                </ul>
+
+                <div class="timeline-tech-stack">
+                  <span class="tech-pill">LangGraph</span>
+                  <span class="tech-pill">AWS Bedrock</span>
+                  <span class="tech-pill">Apache Airflow</span>
+                  <span class="tech-pill">OpenSearch</span>
+                  <span class="tech-pill">FastAPI</span>
+                  <span class="tech-pill">MCP Protocol</span>
+                  <span class="tech-pill">Python</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Role 2: Pieces Technologies -->
+            <div class="timeline-item">
+              <div class="timeline-node-marker"></div>
+              <div class="timeline-card">
+                <div class="timeline-header-top">
+                  <div>
+                    <h3 class="timeline-org">
+                      Pieces Technologies
+                      <span class="timeline-badge">Clinical AI Systems</span>
+                    </h3>
+                    <div class="timeline-role">Quantitative Scientist / AI Engineer</div>
+                    <div class="timeline-location">
+                      <i class="bi bi-geo-alt"></i> Irving, Texas, United States
+                    </div>
+                  </div>
+                  <span class="timeline-period">August 2024 – May 2025</span>
+                </div>
+
+                <ul class="timeline-bullets">
+                  <li class="timeline-bullet">
+                    <strong>HL7 FHIR Patient Simulation Framework:</strong> Revamped Python-based patient data simulation framework using LLMs to generate realistic HL7 FHIR datasets for NIH-funded cancer research, enabling reproducible test data across clinical studies.
+                  </li>
+                  <li class="timeline-bullet">
+                    <strong>Pieces in Your Pocket Clinical Guardrails:</strong> Designed safety and workflow guardrails for conversational AI, enabling EHR updates and instant answers to clinical questions while streamlining after-hours physician documentation.
+                  </li>
+                  <li class="timeline-bullet">
+                    <strong>AWS Bedrock Model Parallelism:</strong> Architected and deployed multi-modal GenAI applications using AWS Bedrock with model parallelism, achieving a <strong>50%</strong> reduction in inference latency.
+                  </li>
+                  <li class="timeline-bullet">
+                    <strong>Internal AI Assistant Tooling:</strong> Developed a React-based ChatGPT-style web application for automating internal marketing research and lead enrichment, cutting manual prep time by <strong>40%</strong>.
+                  </li>
+                </ul>
+
+                <div class="timeline-tech-stack">
+                  <span class="tech-pill">AWS Bedrock</span>
+                  <span class="tech-pill">HL7 FHIR</span>
+                  <span class="tech-pill">Python</span>
+                  <span class="tech-pill">React</span>
+                  <span class="tech-pill">Clinical Guardrails</span>
+                  <span class="tech-pill">Docker</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Role 3: Spotflock Technologies -->
+            <div class="timeline-item">
+              <div class="timeline-node-marker"></div>
+              <div class="timeline-card">
+                <div class="timeline-header-top">
+                  <div>
+                    <h3 class="timeline-org">
+                      Spotflock Technologies
+                      <span class="timeline-badge">Applied AI & Computer Vision</span>
+                    </h3>
+                    <div class="timeline-role">Data Science Engineer</div>
+                    <div class="timeline-location">
+                      <i class="bi bi-geo-alt"></i> Hyderabad, Telangana, India
+                    </div>
+                  </div>
+                  <span class="timeline-period">May 2023 – September 2023</span>
+                </div>
+
+                <ul class="timeline-bullets">
+                  <li class="timeline-bullet">
+                    <strong>LLM Fine-Tuning & Applications:</strong> Built LLM applications with Hugging Face, GPT-3.5, and LangChain; fine-tuned transformers (BERT, GPT variants), improving contextual accuracy by <strong>25%</strong> on client-specific datasets.
+                  </li>
+                  <li class="timeline-bullet">
+                    <strong>GolfGPT Biomechanical Analysis:</strong> Engineered computer vision posture estimation using MediaPipe 33-point pose keypoints and joint-angle calculations to provide real-time swing form feedback.
+                  </li>
+                  <li class="timeline-bullet">
+                    <strong>Neo Legal AI RAG Platform:</strong> Designed and prototyped a Retrieval-Augmented Generation (RAG) agent for legal document semantic indexing, clause search, and contract summarization, reducing manual research by <strong>40%</strong>.
+                  </li>
+                  <li class="timeline-bullet">
+                    <strong>REST APIs & Microservices:</strong> Built robust RESTful APIs in FastAPI and Flask containerized with Docker, improving cross-service data exchange efficiency by <strong>25%</strong>.
+                  </li>
+                </ul>
+
+                <div class="timeline-tech-stack">
+                  <span class="tech-pill">MediaPipe</span>
+                  <span class="tech-pill">LangChain</span>
+                  <span class="tech-pill">FastAPI</span>
+                  <span class="tech-pill">Docker</span>
+                  <span class="tech-pill">PyTorch</span>
+                  <span class="tech-pill">Transformers</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Role 4: The SmartBridge -->
+            <div class="timeline-item">
+              <div class="timeline-node-marker"></div>
+              <div class="timeline-card">
+                <div class="timeline-header-top">
+                  <div>
+                    <h3 class="timeline-org">
+                      The SmartBridge
+                      <span class="timeline-badge">Machine Learning</span>
+                    </h3>
+                    <div class="timeline-role">Machine Learning Engineer</div>
+                    <div class="timeline-location">
+                      <i class="bi bi-geo-alt"></i> Hyderabad, Telangana, India
+                    </div>
+                  </div>
+                  <span class="timeline-period">February 2023 – June 2023</span>
+                </div>
+
+                <ul class="timeline-bullets">
+                  <li class="timeline-bullet">
+                    Developed supervised and unsupervised predictive models and interactive Tableau dashboards that boosted course sales by <strong>20%</strong> and enhanced strategic business profitability by <strong>30%</strong>.
+                  </li>
+                  <li class="timeline-bullet">
+                    Mentored <strong>80+</strong> aspiring data scientists on Python, SQL, and deep neural architectures (CNNs, RNNs, transfer learning, GANs) with hands-on version control and deployment.
+                  </li>
+                  <li class="timeline-bullet">
+                    Created comprehensive machine learning course curriculum integrating PyTorch and TensorFlow into industry-standard projects.
+                  </li>
+                </ul>
+
+                <div class="timeline-tech-stack">
+                  <span class="tech-pill">PyTorch</span>
+                  <span class="tech-pill">TensorFlow</span>
+                  <span class="tech-pill">Tableau</span>
+                  <span class="tech-pill">Python</span>
+                  <span class="tech-pill">Scikit-learn</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Role 5: Spatialhawk Geoinformatics -->
+            <div class="timeline-item">
+              <div class="timeline-node-marker"></div>
+              <div class="timeline-card">
+                <div class="timeline-header-top">
+                  <div>
+                    <h3 class="timeline-org">
+                      Spatialhawk Geoinformatics
+                      <span class="timeline-badge">Edge CV & Systems</span>
+                    </h3>
+                    <div class="timeline-role">Data Science Intern</div>
+                    <div class="timeline-location">
+                      <i class="bi bi-geo-alt"></i> Hyderabad, Telangana, India
+                    </div>
+                  </div>
+                  <span class="timeline-period">March 2022 – May 2022</span>
+                </div>
+
+                <ul class="timeline-bullets">
+                  <li class="timeline-bullet">
+                    Developed a cost-effective employee attendance prototype deployed on a Raspberry Pi 3 rig utilizing MTCNN, FaceNet embeddings, and support vector clustering, achieving a <strong>50%</strong> boost in performance over baseline OpenCV.
+                  </li>
+                  <li class="timeline-bullet">
+                    Built neural network object detection pipelines and containerized endpoints with FastAPI for low-latency edge verification.
+                  </li>
+                </ul>
+
+                <div class="timeline-tech-stack">
+                  <span class="tech-pill">Raspberry Pi</span>
+                  <span class="tech-pill">FastAPI</span>
+                  <span class="tech-pill">MTCNN</span>
+                  <span class="tech-pill">FaceNet</span>
+                  <span class="tech-pill">OpenCV</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================================
+         05. PROJECT SHOWCASE — INTERACTIVE CASE STUDIES
+         ================================================================ -->
+    <section id="projects" class="section" style="background: rgba(14, 18, 26, 0.4);">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">Case Studies & Architecture</span>
+          <h2 class="section-title">Engineered AI Systems & Prototypes.</h2>
+          <p class="section-subtitle">
+            Click any project card to open an in-depth case study exploring the technical architecture, engineering decisions, and measurable outcomes.
+          </p>
+        </div>
+
+        <!-- Category Filter Buttons -->
+        <div class="project-filter-bar">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="agentic">Agentic AI</button>
+          <button class="filter-btn" data-filter="clinical">Healthcare AI</button>
+          <button class="filter-btn" data-filter="ml">Machine Learning</button>
+          <button class="filter-btn" data-filter="cv">Computer Vision</button>
+          <button class="filter-btn" data-filter="systems">Systems & Cloud</button>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- Project 1: Agentic Travel Assistant -->
+          <article class="project-card" data-project="travel" data-category="agentic systems">
+            <div class="project-media-wrap">
+              <img src="assets/img/portfolio/portfolio-1.jpg" alt="Agentic Virtual Travel Assistant" class="project-media-img">
+              <span class="project-category-badge">Agentic AI</span>
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-card-title">
+                Agentic Virtual Travel Assistant
+                <i class="bi bi-arrow-up-right"></i>
+              </h3>
+              <p class="project-card-desc">
+                LangGraph Deep Agent autonomously planning multi-day travel itineraries via live flight & lodging APIs, real-time constraint validation, and LiveKit voice streaming.
+              </p>
+              <div class="project-highlights">
+                <div class="project-highlight-item">
+                  <i class="bi bi-check2-circle"></i> Sub-second initial turn response with LiveKit WebRTC
+                </div>
+                <div class="project-highlight-item">
+                  <i class="bi bi-check2-circle"></i> Hierarchical StateGraph with route optimization
+                </div>
+              </div>
+              <div class="project-card-footer">
+                <div class="project-tags">
+                  <span class="project-tag">LangGraph</span>
+                  <span class="project-tag">LiveKit</span>
+                  <span class="project-tag">FastAPI</span>
+                </div>
+                <span class="project-cta-link open-modal-trigger">
+                  Deep Dive <i class="bi bi-chevron-right"></i>
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: SmarterNotes Clinical Agent -->
+          <article class="project-card" data-project="smarterdx" data-category="agentic clinical systems">
+            <div class="project-media-wrap">
+              <img src="assets/img/portfolio/portfolio-details-1.jpg" alt="SmarterNotes Clinical Agent" class="project-media-img">
+              <span class="project-category-badge">Clinical AI</span>
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-card-title">
+                SmarterNotes & Clinical DAG Pipeline
+                <i class="bi bi-arrow-up-right"></i>
+              </h3>
+              <p class="project-card-desc">
+                Clinical documentation and chart enrichment multi-agent system transforming full EHR records into evidence-backed notes with exact paragraph citations.
+              </p>
+              <div class="project-highlights">
+                <div class="project-highlight-item">
+                  <i class="bi bi-check2-circle"></i> 50% inference latency cut via Bedrock parallelism
+                </div>
+                <div class="project-highlight-item">
+                  <i class="bi bi-check2-circle"></i> 60% reduction in manual prompt evaluation workload
+                </div>
+              </div>
+              <div class="project-card-footer">
+                <div class="project-tags">
+                  <span class="project-tag">AWS Bedrock</span>
+                  <span class="project-tag">Airflow</span>
+                  <span class="project-tag">OpenSearch</span>
+                </div>
+                <span class="project-cta-link open-modal-trigger">
+                  Deep Dive <i class="bi bi-chevron-right"></i>
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: OpenClaw Marketing Bot -->
+          <article class="project-card" data-project="openclaw" data-category="agentic systems">
+            <div class="project-media-wrap">
+              <img src="assets/img/portfolio/portfolio-2.jpg" alt="OpenClaw Marketing Automation" class="project-media-img">
+              <span class="project-category-badge">Agentic AI</span>
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-card-title">
+                OpenClaw Marketing Automation Agent
+                <i class="bi bi-arrow-up-right"></i>
+              </h3>
+              <p class="project-card-desc">
+                Autonomous marketing automation agent running on Google Cloud to streamline prospect research, signal enrichment, personalized outreach, and CRM syncing.
+              </p>
+              <div class="project-highlights">
+                <div class="project-highlight-item">
+                  <i class="bi bi-check2-circle"></i> Automated 100% of initial lead context enrichment
+                </div>
+                <div class="project-highlight-item">
+                  <i class="bi bi-check2-circle"></i> Slashed manual marketing prep time by over 40%
+                </div>
+              </div>
+              <div class="project-card-footer">
+                <div class="project-tags">
+                  <span class="project-tag">Google Cloud</span>
+                  <span class="project-tag">LLMs</span>
+                  <span class="project-tag">Python</span>
+                </div>
+                <span class="project-cta-link open-modal-trigger">
+                  Deep Dive <i class="bi bi-chevron-right"></i>
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: Atrial Fibrillation Detection -->
+          <article class="project-card" data-project="afib" data-category="clinical ml systems">
+            <div class="project-media-wrap">
+              <img src="assets/img/portfolio/portfolio-details_DEFO-1.jpeg" alt="Atrial Fibrillation Detection" class="project-media-img">
+              <span class="project-category-badge">Machine Learning</span>
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-card-title">
+                Atrial Fibrillation Early Diagnostic Engine
+                <i class="bi bi-arrow-up-right"></i>
+              </h3>
+              <p class="project-card-desc">
+                Predictive clinical ML pipeline trained on physiological ECG data. Boosted early diagnosis accuracy to 95% and cut training from 13h to 13min via CuDA ML.
+              </p>
+              <div class="project-highlights">
+                <div class="project-highlight-item">
+                  <i class="bi bi-check2-circle"></i> 13 hours → 13 minutes GPU training acceleration
+                </div>
+                <div class="project-highlight-item">
+                  <i class="bi bi-check2-circle"></i> 95% early diagnostic accuracy; Dockerized on AWS
+                </div>
+              </div>
+              <div class="project-card-footer">
+                <div class="project-tags">
+                  <span class="project-tag">CuDA ML</span>
+                  <span class="project-tag">PyTorch</span>
+                  <span class="project-tag">Docker</span>
+                </div>
+                <span class="project-cta-link open-modal-trigger">
+                  Deep Dive <i class="bi bi-chevron-right"></i>
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 5: Edge Biometric Attendance API -->
+          <article class="project-card" data-project="faceapi" data-category="cv systems">
+            <div class="project-media-wrap">
+              <img src="assets/img/portfolio/portfolio-details_FRAPI-1.jpg" alt="Biometric Face Recognition Attendance" class="project-media-img">
+              <span class="project-category-badge">Computer Vision</span>
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-card-title">
+                Edge Biometric Attendance API & Rig
+                <i class="bi bi-arrow-up-right"></i>
+              </h3>
+              <p class="project-card-desc">
+                Cost-effective edge facial recognition system utilizing MTCNN alignment, FaceNet 128-d embeddings, and support vector clustering on Raspberry Pi 3 hardware.
+              </p>
+              <div class="project-highlights">
+                <div class="project-highlight-item">
+                  <i class="bi bi-check2-circle"></i> 50% performance boost over baseline OpenCV models
+                </div>
+                <div class="project-highlight-item">
+                  <i class="bi bi-check2-circle"></i> Sub-second edge verification without cloud latency
+                </div>
+              </div>
+              <div class="project-card-footer">
+                <div class="project-tags">
+                  <span class="project-tag">FastAPI</span>
+                  <span class="project-tag">FaceNet</span>
+                  <span class="project-tag">Raspberry Pi</span>
+                </div>
+                <span class="project-cta-link open-modal-trigger">
+                  Deep Dive <i class="bi bi-chevron-right"></i>
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 6: GolfGPT Biomechanics -->
+          <article class="project-card" data-project="golfgpt" data-category="cv systems">
+            <div class="project-media-wrap">
+              <img src="assets/img/portfolio/portfolio-3.jpg" alt="GolfGPT AI Posture Coach" class="project-media-img">
+              <span class="project-category-badge">Computer Vision</span>
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-card-title">
+                GolfGPT AI Posture & Swing Coach
+                <i class="bi bi-arrow-up-right"></i>
+              </h3>
+              <p class="project-card-desc">
+                Real-time biomechanical analysis engine using MediaPipe 33-point pose keypoints and joint-angle kinematics to extract swing mechanics and deliver coaching.
+              </p>
+              <div class="project-highlights">
+                <div class="project-highlight-item">
+                  <i class="bi bi-check2-circle"></i> 30+ FPS real-time tracking on standard video feeds
+                </div>
+                <div class="project-highlight-item">
+                  <i class="bi bi-check2-circle"></i> Biomechanical joint-angle kinematic heuristics
+                </div>
+              </div>
+              <div class="project-card-footer">
+                <div class="project-tags">
+                  <span class="project-tag">MediaPipe</span>
+                  <span class="project-tag">OpenCV</span>
+                  <span class="project-tag">Python</span>
+                </div>
+                <span class="project-cta-link open-modal-trigger">
+                  Deep Dive <i class="bi bi-chevron-right"></i>
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 7: Neo Legal AI -->
+          <article class="project-card" data-project="neolegal" data-category="agentic systems">
+            <div class="project-media-wrap">
+              <img src="assets/img/portfolio/portfolio-4.jpg" alt="Neo Legal AI Intelligence" class="project-media-img">
+              <span class="project-category-badge">Applied AI & RAG</span>
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-card-title">
+                Neo Legal AI Contract Intelligence
+                <i class="bi bi-arrow-up-right"></i>
+              </h3>
+              <p class="project-card-desc">
+                Enterprise RAG platform for unstructured contract semantic indexing, clause analysis, and automated risk summarization with exact citation tracking.
+              </p>
+              <div class="project-highlights">
+                <div class="project-highlight-item">
+                  <i class="bi bi-check2-circle"></i> Reduced manual contract research workload by 40%
+                </div>
+                <div class="project-highlight-item">
+                  <i class="bi bi-check2-circle"></i> Dense & sparse hybrid retrieval for clause indexing
+                </div>
+              </div>
+              <div class="project-card-footer">
+                <div class="project-tags">
+                  <span class="project-tag">OpenSearch</span>
+                  <span class="project-tag">LangChain</span>
+                  <span class="project-tag">FastAPI</span>
+                </div>
+                <span class="project-cta-link open-modal-trigger">
+                  Deep Dive <i class="bi bi-chevron-right"></i>
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 8: Share Price Estimator -->
+          <article class="project-card" data-project="shareprice" data-category="ml systems">
+            <div class="project-media-wrap">
+              <img src="assets/img/portfolio/portfolio-details_SPE-1.jpg" alt="Share Price Estimator" class="project-media-img">
+              <span class="project-category-badge">Machine Learning</span>
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-card-title">
+                Share Price Predictive Estimator
+                <i class="bi bi-arrow-up-right"></i>
+              </h3>
+              <p class="project-card-desc">
+                Financial time-series predictive modeling engine combining LSTM neural networks and classical SARIMAX statistical models with an interactive Flask web dashboard.
+              </p>
+              <div class="project-highlights">
+                <div class="project-highlight-item">
+                  <i class="bi bi-check2-circle"></i> Dual ensemble architecture with confidence bands
+                </div>
+                <div class="project-highlight-item">
+                  <i class="bi bi-check2-circle"></i> Automated technical indicator ingestion
+                </div>
+              </div>
+              <div class="project-card-footer">
+                <div class="project-tags">
+                  <span class="project-tag">LSTM</span>
+                  <span class="project-tag">SARIMAX</span>
+                  <span class="project-tag">Flask</span>
+                </div>
+                <span class="project-cta-link open-modal-trigger">
+                  Deep Dive <i class="bi bi-chevron-right"></i>
+                </span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================================
+         06. TECHNICAL ARSENAL — MEANINGFUL TAXONOMY (NO FAKE %)
+         ================================================================ -->
+    <section id="arsenal" class="section">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">Technology Stack</span>
+          <h2 class="section-title">Architectural Arsenal & Frameworks.</h2>
+          <p class="section-subtitle">
+            Grouped by functional engineering domain. No arbitrary proficiency percentages — only production tools and architectures I work with daily.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+
+          <!-- Domain 1: Agentic AI -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon">
+                <i class="bi bi-diagram-3-fill"></i>
+              </div>
+              <div>
+                <h3 class="skill-cat-title">Agentic AI & Orchestration</h3>
+                <span class="skill-cat-subtitle">// AUTONOMOUS WORKFLOWS & RAG</span>
+              </div>
+            </div>
+
+            <div class="skill-badges-cluster">
+              <div class="skill-badge"><i class="bi bi-bezier2"></i> LangGraph</div>
+              <div class="skill-badge"><i class="bi bi-plugin"></i> Model Context Protocol (MCP)</div>
+              <div class="skill-badge"><i class="bi bi-layers-fill"></i> Multi-Agent StateGraphs</div>
+              <div class="skill-badge"><i class="bi bi-search"></i> Hybrid RAG & Grounding</div>
+              <div class="skill-badge"><i class="bi bi-check-all"></i> LLM-as-a-Judge Eval</div>
+              <div class="skill-badge"><i class="bi bi-shield-lock-fill"></i> Adversarial Guardrails</div>
+              <div class="skill-badge"><i class="bi bi-eye-fill"></i> Langfuse & Arize Phoenix</div>
+              <div class="skill-badge"><i class="bi bi-link"></i> LangChain & LlamaIndex</div>
+            </div>
+
+            <div class="skill-deep-dive">
+              <strong>Core Architecture:</strong> Specializing in cyclical state-machine agents with human-in-the-loop checkpoints, deterministic tool routing, and streaming WebRTC interfaces.
+            </div>
+          </div>
+
+          <!-- Domain 2: AI & ML -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon cyan">
+                <i class="bi bi-cpu-fill"></i>
+              </div>
+              <div>
+                <h3 class="skill-cat-title">AI, Machine Learning & Vision</h3>
+                <span class="skill-cat-subtitle">// MODEL TRAINING & COMPUTER VISION</span>
+              </div>
+            </div>
+
+            <div class="skill-badges-cluster">
+              <div class="skill-badge"><iconify-icon icon="skill-icons:pytorch-light"></iconify-icon> PyTorch</div>
+              <div class="skill-badge"><iconify-icon icon="devicon:scikitlearn"></iconify-icon> Scikit-Learn</div>
+              <div class="skill-badge"><i class="bi bi-gpu-card"></i> CuDA ML (cuML)</div>
+              <div class="skill-badge"><iconify-icon icon="logos:hugging-face-icon"></iconify-icon> Hugging Face</div>
+              <div class="skill-badge"><i class="bi bi-person-bounding-box"></i> MediaPipe Keypoints</div>
+              <div class="skill-badge"><i class="bi bi-camera-video-fill"></i> OpenCV & FaceNet</div>
+              <div class="skill-badge"><iconify-icon icon="skill-icons:tensorflow-light"></iconify-icon> TensorFlow</div>
+              <div class="skill-badge"><i class="bi bi-graph-up"></i> SARIMAX & Time-Series</div>
+            </div>
+
+            <div class="skill-deep-dive">
+              <strong>Core Architecture:</strong> Expertise in GPU-accelerated model training, transformer fine-tuning for specialized domains, and low-latency computer vision edge inference.
+            </div>
+          </div>
+
+          <!-- Domain 3: Backend & Systems -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon emerald">
+                <i class="bi bi-hdd-network-fill"></i>
+              </div>
+              <div>
+                <h3 class="skill-cat-title">Backend & Distributed Systems</h3>
+                <span class="skill-cat-subtitle">// ROBUST APIS & MICROSERVICES</span>
+              </div>
+            </div>
+
+            <div class="skill-badges-cluster">
+              <div class="skill-badge"><iconify-icon icon="skill-icons:python-dark"></iconify-icon> Python 3.x</div>
+              <div class="skill-badge"><iconify-icon icon="skill-icons:fastapi"></iconify-icon> FastAPI</div>
+              <div class="skill-badge"><iconify-icon icon="skill-icons:flask-dark"></iconify-icon> Flask</div>
+              <div class="skill-badge"><iconify-icon icon="skill-icons:docker"></iconify-icon> Docker & Compose</div>
+              <div class="skill-badge"><iconify-icon icon="skill-icons:postgresql-dark"></iconify-icon> PostgreSQL & SQL</div>
+              <div class="skill-badge"><iconify-icon icon="skill-icons:react-dark"></iconify-icon> React & Web Apps</div>
+              <div class="skill-badge"><iconify-icon icon="skill-icons:git"></iconify-icon> Git & GitHub Actions</div>
+              <div class="skill-badge"><i class="bi bi-terminal-fill"></i> Linux & Bash</div>
+            </div>
+
+            <div class="skill-deep-dive">
+              <strong>Core Architecture:</strong> Production containerization, async I/O high-throughput microservices, strict Pydantic schemas, and robust RESTful API design.
+            </div>
+          </div>
+
+          <!-- Domain 4: Cloud & Infrastructure -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon violet">
+                <i class="bi bi-cloud-arrow-up-fill"></i>
+              </div>
+              <div>
+                <h3 class="skill-cat-title">Cloud & AI Infrastructure</h3>
+                <span class="skill-cat-subtitle">// MODEL DEPLOYMENT & PIPELINES</span>
+              </div>
+            </div>
+
+            <div class="skill-badges-cluster">
+              <div class="skill-badge"><iconify-icon icon="skill-icons:aws-light"></iconify-icon> AWS Bedrock</div>
+              <div class="skill-badge"><iconify-icon icon="logos:airflow-icon"></iconify-icon> Apache Airflow DAGs</div>
+              <div class="skill-badge"><i class="bi bi-database-fill"></i> OpenSearch Vector DB</div>
+              <div class="skill-badge"><i class="bi bi-bounding-box-circles"></i> Pinecone & Chroma</div>
+              <div class="skill-badge"><i class="bi bi-hospital"></i> HL7 FHIR Datasets</div>
+              <div class="skill-badge"><i class="bi bi-hdd-stack-fill"></i> AWS EC2 & S3</div>
+              <div class="skill-badge"><iconify-icon icon="skill-icons:gcp-light"></iconify-icon> Google Cloud Platform</div>
+              <div class="skill-badge"><i class="bi bi-motherboard-fill"></i> Raspberry Pi Edge IoT</div>
+            </div>
+
+            <div class="skill-deep-dive">
+              <strong>Core Architecture:</strong> High-reliability DAG orchestration, model parallelism across Claude 3.5 & candidate models, and vector embedding pipelines for clinical search.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================================
+         07. EDUCATION & ACHIEVEMENTS
+         ================================================================ -->
+    <section id="education" class="section" style="background: rgba(14, 18, 26, 0.4);">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">Credentials & Academics</span>
+          <h2 class="section-title">Education & Recognitions.</h2>
+          <p class="section-subtitle">
+            Formal foundations in Computer Science, advanced Information Technology, and enterprise quality management.
+          </p>
+        </div>
+
+        <div class="education-grid">
+          
+          <!-- Master's Degree -->
+          <div class="edu-card">
+            <div class="edu-icon-wrap">
+              <i class="bi bi-mortarboard-fill"></i>
+            </div>
+            <div>
+              <h3 class="edu-degree">Master of Science in IT & Management</h3>
+              <div class="edu-institution">The University of Texas at Dallas</div>
+              <div class="edu-period">August 2023 – May 2025 • Dallas, TX, USA</div>
+              <p class="edu-desc">
+                <strong>GPA: 3.58</strong> • Recipient of the competitive <strong>Dean's Excellence Scholarship</strong>. Served as <strong>Graduate Student Assembly Student Representative</strong>. Focus on Applied Machine Learning, Database Warehousing, Advanced Analytics, and Product Management.
+              </p>
+            </div>
+          </div>
+
+          <!-- Bachelor's Degree -->
+          <div class="edu-card">
+            <div class="edu-icon-wrap">
+              <i class="bi bi-cpu-fill"></i>
+            </div>
+            <div>
+              <h3 class="edu-degree">B.Tech in Computer Science & Engineering</h3>
+              <div class="edu-institution">Institute of Aeronautical Engineering</div>
+              <div class="edu-period">August 2019 – July 2023 • Hyderabad, India</div>
+              <p class="edu-desc">
+                <strong>GPA: 3.50</strong> • <strong>Winner of the 2022 Interdisciplinary Project Expo</strong>. Secured seed funding for 2 startup initiatives. Deep curriculum in Data Structures, Algorithms, Distributed Systems, and Machine Learning.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 4 Key Accreditations -->
+        <div class="achievements-row">
+          
+          <div class="achievement-card">
+            <div class="achieve-badge-icon"><i class="bi bi-shield-check"></i></div>
+            <h4 class="achieve-title">Six Sigma Yellow Belt</h4>
+            <div class="achieve-org">6sigmastudy Global Standard</div>
+          </div>
+
+          <div class="achievement-card">
+            <div class="achieve-badge-icon"><i class="bi bi-cloud-check-fill"></i></div>
+            <h4 class="achieve-title">AWS ML Foundations</h4>
+            <div class="achieve-org">Udacity & Amazon Web Services</div>
+          </div>
+
+          <div class="achievement-card">
+            <div class="achieve-badge-icon"><i class="bi bi-trophy-fill"></i></div>
+            <h4 class="achieve-title">Project Expo Winner</h4>
+            <div class="achieve-org">2022 Interdisciplinary Expo</div>
+          </div>
+
+          <div class="achievement-card">
+            <div class="achieve-badge-icon"><i class="bi bi-award-fill"></i></div>
+            <h4 class="achieve-title">Dean's Scholarship</h4>
+            <div class="achieve-org">UT Dallas School of Management</div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================================
+         08. CONTACT & CONVERSION SECTION
+         ================================================================ -->
+    <section id="contact" class="section">
+      <div class="container">
+        
+        <div class="contact-card-main">
+          <div class="contact-glow-accent"></div>
+
+          <div class="contact-layout">
             
-            <div class="cp-form-group">
-              <label class="cp-form-label">// ENCRYPTED UPLINK EMAIL</label>
-              <input type="email" class="cp-input" placeholder="your.name@domain.com" required>
+            <!-- Left Info -->
+            <div class="contact-left">
+              <span class="section-tag">Let's Connect</span>
+              <h2>Have an interesting problem? Let’s build something.</h2>
+              <p class="contact-pitch">
+                Whether you're looking to architect agentic AI workflows, deploy clinical LLM infrastructure, or discuss applied machine learning roles — I'd love to connect.
+              </p>
+
+              <div class="direct-comms-list">
+                
+                <a href="mailto:ashwinsang.work@gmail.com" class="direct-comm-item" id="copyEmailBtn" title="Click to copy email">
+                  <div class="comm-icon"><i class="bi bi-envelope-at-fill"></i></div>
+                  <div>
+                    <div class="comm-label">Direct Work Email (Click to Copy)</div>
+                    <div class="comm-val">ashwinsang.work@gmail.com</div>
+                  </div>
+                </a>
+
+                <a href="https://www.linkedin.com/in/ashwin-srdy/" target="_blank" rel="noopener noreferrer" class="direct-comm-item">
+                  <div class="comm-icon"><i class="bi bi-linkedin"></i></div>
+                  <div>
+                    <div class="comm-label">LinkedIn Profile</div>
+                    <div class="comm-val">linkedin.com/in/ashwin-srdy</div>
+                  </div>
+                </a>
+
+                <a href="https://github.com/ashwin-srdy" target="_blank" rel="noopener noreferrer" class="direct-comm-item">
+                  <div class="comm-icon"><i class="bi bi-github"></i></div>
+                  <div>
+                    <div class="comm-label">GitHub Repositories</div>
+                    <div class="comm-val">github.com/ashwin-srdy</div>
+                  </div>
+                </a>
+
+                <a href="https://linktr.ee/ashwin_srdy" target="_blank" rel="noopener noreferrer" class="direct-comm-item">
+                  <div class="comm-icon"><i class="bi bi-link-45deg"></i></div>
+                  <div>
+                    <div class="comm-label">Linktree Central Deck</div>
+                    <div class="comm-val">linktr.ee/ashwin_srdy</div>
+                  </div>
+                </a>
+
+              </div>
             </div>
 
-            <div class="cp-form-group">
-              <label class="cp-form-label">// TRANSMISSION SUBJECT</label>
-              <input type="text" class="cp-input" placeholder="Project / Contract / Query" required>
+            <!-- Right Functional Form -->
+            <div class="contact-right">
+              <form id="contactForm" class="contact-form">
+                
+                <div class="form-group">
+                  <label for="contactName" class="form-label">YOUR NAME *</label>
+                  <input type="text" id="contactName" class="form-input" placeholder="e.g. Sarah Connor / CTO" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="contactEmail" class="form-label">YOUR EMAIL *</label>
+                  <input type="email" id="contactEmail" class="form-input" placeholder="name@company.com" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="contactSubject" class="form-label">SUBJECT</label>
+                  <input type="text" id="contactSubject" class="form-input" placeholder="Agentic AI Project / Technical Role / Advisory">
+                </div>
+
+                <div class="form-group">
+                  <label for="contactMessage" class="form-label">MESSAGE *</label>
+                  <textarea id="contactMessage" class="form-textarea" placeholder="Describe the engineering challenge or opportunity..." required></textarea>
+                </div>
+
+                <div class="form-actions">
+                  <button type="submit" class="btn btn-primary" style="flex: 1;">
+                    <i class="bi bi-send-fill"></i> Send Message
+                  </button>
+                  <a href="#resumeModal" class="btn btn-secondary open-resume-btn">
+                    <i class="bi bi-file-earmark-person"></i> View Resume
+                  </a>
+                </div>
+
+                <div id="formFeedback" class="form-feedback"></div>
+
+              </form>
             </div>
 
-            <div class="cp-form-group">
-              <label class="cp-form-label">// DATA PACKET (MESSAGE)</label>
-              <textarea class="cp-input" placeholder="Enter payload..." required></textarea>
-            </div>
-
-            <button type="submit" class="cp-btn cp-btn-primary" style="width: 100%; justify-content: center;">
-              <i class="bi bi-send"></i> TRANSMIT DATA PACKET
-            </button>
-            
-            <div id="formResponseBox" style="display: none; margin-top: 15px; font-family: var(--font-mono); font-size: 0.85rem;"></div>
-          </form>
-        </div>
-
-        <!-- Direct Contact Shards -->
-        <div class="cp-direct-contacts">
-          
-          <a href="mailto:ashwinsang.work@gmail.com" class="cp-contact-shard">
-            <div class="cp-contact-icon"><i class="bi bi-envelope-at"></i></div>
-            <div>
-              <div class="cp-contact-title">PRIMARY WORK EMAIL</div>
-              <div class="cp-contact-val">ashwinsang.work@gmail.com</div>
-            </div>
-          </a>
-
-          <a href="https://www.linkedin.com/in/ashwin-srdy/" target="_blank" rel="noopener noreferrer" class="cp-contact-shard">
-            <div class="cp-contact-icon"><i class="bi bi-linkedin"></i></div>
-            <div>
-              <div class="cp-contact-title">LINKEDIN PROFILE</div>
-              <div class="cp-contact-val">linkedin.com/in/ashwin-srdy</div>
-            </div>
-          </a>
-
-          <a href="https://github.com/ashwin-srdy" target="_blank" rel="noopener noreferrer" class="cp-contact-shard">
-            <div class="cp-contact-icon"><i class="bi bi-github"></i></div>
-            <div>
-              <div class="cp-contact-title">GITHUB REPOSITORY</div>
-              <div class="cp-contact-val">github.com/ashwin-srdy</div>
-            </div>
-          </a>
-
-          <a href="https://linktr.ee/ashwin_srdy" target="_blank" rel="noopener noreferrer" class="cp-contact-shard">
-            <div class="cp-contact-icon"><i class="bi bi-link-45deg"></i></div>
-            <div>
-              <div class="cp-contact-title">LINKTREE PROFILE</div>
-              <div class="cp-contact-val">linktr.ee/ashwin_srdy</div>
-            </div>
-          </a>
-
-        </div>
-              <div class="cp-contact-val">github.com/ashwin-srdy</div>
-            </div>
-          </a>
+          </div>
 
         </div>
 
@@ -832,15 +1362,202 @@
   </main>
 
   <!-- ================================================================
-       CYBER FOOTER
+       FOOTER
        ================================================================ -->
-  <footer class="cp-footer">
-    <p>
-      &copy; 2077 // <span class="highlight">ASHWIN KUMAR SANGAREDDYPETA</span> // NETRUNNER AI SYSTEMS // ALL NODES NOMINAL
-    </p>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-left">
+          <span>&copy; 2026 Ashwin Kumar Sangareddypeta</span>
+          <span style="opacity: 0.3;">•</span>
+          <div class="footer-status-pill">
+            <span class="footer-status-dot"></span> All Systems Operational
+          </div>
+        </div>
+        <div class="footer-right">
+          <span>Dallas, TX • Agentic AI & Clinical Systems</span>
+        </div>
+      </div>
+    </div>
   </footer>
 
-  <!-- Main Cyberpunk UI Engine -->
+  <!-- ================================================================
+       EXPANDABLE CASE STUDY MODAL
+       ================================================================ -->
+  <div id="caseStudyModal" class="modal-overlay" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div>
+          <div id="modalCategory" class="modal-project-category">PROJECT CATEGORY</div>
+          <h2 id="modalTitle" class="modal-project-title" style="font-size: 1.4rem; margin-bottom: 0;">Project Name</h2>
+        </div>
+        <button id="modalCloseBtn" class="modal-close-btn" aria-label="Close dialog">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <p id="modalTagline" style="font-size: 1.05rem; color: #ffffff; margin-bottom: 1.75rem; font-weight: 500;"></p>
+
+        <div class="modal-section-block">
+          <div class="modal-block-title">
+            <i class="bi bi-exclamation-triangle-fill"></i> Problem Statement
+          </div>
+          <div id="modalProblem" class="modal-block-content"></div>
+        </div>
+
+        <div class="modal-section-block">
+          <div class="modal-block-title">
+            <i class="bi bi-diagram-3-fill"></i> Solution & Architecture
+          </div>
+          <div id="modalSolution" class="modal-block-content"></div>
+          <pre id="modalArch" class="modal-arch-diagram"></pre>
+        </div>
+
+        <div class="modal-section-block">
+          <div class="modal-block-title">
+            <i class="bi bi-gear-wide-connected"></i> Engineering Challenges Overcome
+          </div>
+          <div id="modalChallenges" class="modal-block-content"></div>
+        </div>
+
+        <div class="modal-section-block">
+          <div class="modal-block-title">
+            <i class="bi bi-check-circle-fill"></i> Measurable Outcomes & Impact
+          </div>
+          <div id="modalOutcomes" class="modal-block-content"></div>
+        </div>
+
+        <div class="modal-section-block">
+          <div class="modal-block-title">
+            <i class="bi bi-tools"></i> Technologies & Frameworks
+          </div>
+          <div id="modalTechStack" class="timeline-tech-stack" style="border: none; padding-top: 0.25rem;"></div>
+        </div>
+
+        <div style="display: flex; gap: 1rem; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border-subtle);">
+          <a id="modalRepoLink" href="https://github.com/ashwin-srdy" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            <i class="bi bi-github"></i> View GitHub Repository
+          </a>
+          <a href="#contact" class="btn btn-secondary" onclick="document.getElementById('caseStudyModal').classList.remove('open'); document.body.style.overflow='';">
+            <i class="bi bi-chat-dots"></i> Discuss Architecture
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================================================================
+       RESUME VIEWER MODAL
+       ================================================================ -->
+  <div id="resumeModal" class="modal-overlay" aria-hidden="true" role="dialog" aria-labelledby="resumeModalTitle">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div>
+          <div class="modal-project-category">CURRICULUM VITAE // VERIFIED DOSSIER</div>
+          <h2 id="resumeModalTitle" class="modal-project-title" style="font-size: 1.4rem; margin-bottom: 0;">Ashwin Kumar Sangareddypeta</h2>
+        </div>
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <button id="printResumeBtn" class="btn btn-secondary btn-sm" title="Print or save as PDF">
+            <i class="bi bi-printer"></i> Print / Save PDF
+          </button>
+          <button id="resumeModalClose" class="modal-close-btn" aria-label="Close resume viewer">
+            <i class="bi bi-x-lg"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="modal-body" style="font-size: 0.95rem; line-height: 1.65;">
+        <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; padding-bottom: 1.5rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-subtle);">
+          <div>
+            <h3 style="color: #ffffff; font-size: 1.3rem;">Ashwin Kumar Sangareddypeta</h3>
+            <p style="color: var(--accent-cyan);">AI Engineer & Applied Scientist • Dallas, TX</p>
+          </div>
+          <div style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-tertiary);">
+            <div>Email: <a href="mailto:ashwinsang.work@gmail.com" style="color: var(--accent-blue-light);">ashwinsang.work@gmail.com</a></div>
+            <div>GitHub: <a href="https://github.com/ashwin-srdy" target="_blank" style="color: var(--accent-blue-light);">github.com/ashwin-srdy</a></div>
+            <div>LinkedIn: <a href="https://www.linkedin.com/in/ashwin-srdy/" target="_blank" style="color: var(--accent-blue-light);">linkedin.com/in/ashwin-srdy</a></div>
+          </div>
+        </div>
+
+        <div class="modal-section-block">
+          <div class="modal-block-title"><i class="bi bi-person-badge"></i> Professional Summary</div>
+          <p class="modal-block-content">
+            AI Engineer with deep expertise in Agentic AI, Multi-Agent Systems, Healthcare AI, and LLM Infrastructure. Proven track record architecting LangGraph clinical agents, reducing AWS Bedrock inference latency by 50%, slashing manual evaluation workloads by 60%, and accelerating GPU training from 13 hours to 13 minutes. Experienced in translating complex medical workflows into high-reliability, observable software.
+          </p>
+        </div>
+
+        <div class="modal-section-block">
+          <div class="modal-block-title"><i class="bi bi-briefcase-fill"></i> Experience</div>
+          
+          <div style="margin-bottom: 1.25rem;">
+            <div style="display: flex; justify-content: space-between; font-weight: 700; color: #ffffff;">
+              <span>SmarterDx — AI Engineer (Agentic Platform)</span>
+              <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-tertiary);">Dallas, TX</span>
+            </div>
+            <ul style="padding-left: 1.2rem; color: var(--text-secondary); margin-top: 0.4rem;">
+              <li>Architected LangGraph clinical agents (SmarterNotes & SmarterUtilization) and DAG-driven chart enrichment pipelines turning full EHR records into evidence-backed notes.</li>
+              <li>Optimized Airflow DAGs integrating OpenSearch and LLM pipelines, cutting execution time by 30% across 5+ client applications.</li>
+              <li>Architected AWS Bedrock model parallelism with candidate fallbacks, cutting inference latency by 50%.</li>
+            </ul>
+          </div>
+
+          <div style="margin-bottom: 1.25rem;">
+            <div style="display: flex; justify-content: space-between; font-weight: 700; color: #ffffff;">
+              <span>Pieces Technologies — Quantitative Scientist / AI Engineer</span>
+              <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-tertiary);">Aug 2024 – May 2025</span>
+            </div>
+            <ul style="padding-left: 1.2rem; color: var(--text-secondary); margin-top: 0.4rem;">
+              <li>Revamped patient data simulation framework using LLMs generating HL7 FHIR datasets for NIH-funded cancer research.</li>
+              <li>Designed safety and clinical workflow guardrails for conversational bedside AI assisting physicians.</li>
+              <li>Achieved a 50% reduction in inference latency through AWS Bedrock model parallelism.</li>
+            </ul>
+          </div>
+
+          <div style="margin-bottom: 1.25rem;">
+            <div style="display: flex; justify-content: space-between; font-weight: 700; color: #ffffff;">
+              <span>Spotflock Technologies — Data Science Engineer</span>
+              <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-tertiary);">May 2023 – Sep 2023</span>
+            </div>
+            <ul style="padding-left: 1.2rem; color: var(--text-secondary); margin-top: 0.4rem;">
+              <li>Built LLM apps and fine-tuned transformers (+25% accuracy); developed GolfGPT MediaPipe pose estimation; prototyped Neo Legal AI RAG pipeline (-40% research workload).</li>
+            </ul>
+          </div>
+
+          <div>
+            <div style="display: flex; justify-content: space-between; font-weight: 700; color: #ffffff;">
+              <span>The SmartBridge — Machine Learning Engineer</span>
+              <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-tertiary);">Feb 2023 – Jun 2023</span>
+            </div>
+            <ul style="padding-left: 1.2rem; color: var(--text-secondary); margin-top: 0.4rem;">
+              <li>Built predictive models and Tableau analytics (+20% course sales, +30% profitability); mentored 80+ aspiring data scientists in machine learning.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="modal-section-block">
+          <div class="modal-block-title"><i class="bi bi-mortarboard-fill"></i> Education</div>
+          <div style="margin-bottom: 0.75rem;">
+            <strong style="color: #ffffff;">The University of Texas at Dallas</strong> — M.S. in IT & Management (GPA 3.58) • <em>2023 – 2025</em><br>
+            <span style="color: var(--text-tertiary); font-size: 0.85rem;">Dean's Excellence Scholarship • Graduate Student Assembly Student Representative</span>
+          </div>
+          <div>
+            <strong style="color: #ffffff;">Institute of Aeronautical Engineering</strong> — B.Tech in Computer Science & Engineering (GPA 3.50) • <em>2019 – 2023</em><br>
+            <span style="color: var(--text-tertiary); font-size: 0.85rem;">Winner of 2022 Interdisciplinary Project Expo • Seed funded startup initiatives</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Element -->
+  <div id="toastNotice" class="toast-notice" role="alert" aria-live="assertive">
+    <i class="bi bi-check-circle-fill" style="color: var(--accent-emerald-light);"></i>
+    <span class="toast-text">Notification message</span>
+  </div>
+
+  <!-- Main JavaScript Engine -->
   <script src="assets/js/main.js"></script>
+
 </body>
 </html>
