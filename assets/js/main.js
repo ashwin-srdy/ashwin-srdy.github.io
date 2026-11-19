@@ -1,62 +1,28 @@
 /**
- * ASHWIN KUMAR SANGAREDDYPETA — AI ENGINEER PORTFOLIO ENGINE
- * Multi-Agent Topology Canvas, Case Study Modals, Metric Counters, Micro-Haptics
+ * ASHWIN.SYS — INTELLIGENCE IN MOTION
+ * Architecture Engine: Interactive Topology, Node Inspector, Scroll Progress, Card Tilt
  */
 
 (function () {
   'use strict';
 
   /* ==========================================================================
-     01. AUDIO MICRO-HAPTIC SYNTHESIZER (WEB AUDIO API)
+     01. SCROLL PROGRESS INDICATOR
      ========================================================================== */
-  class HapticAudio {
-    constructor() {
-      this.enabled = false;
-      this.ctx = null;
-    }
+  function initScrollProgress() {
+    const progressBar = document.getElementById('scrollProgressBar');
+    if (!progressBar) return;
 
-    init() {
-      if (!this.ctx && (window.AudioContext || window.webkitAudioContext)) {
-        const AudioCtx = window.AudioContext || window.webkitAudioContext;
-        this.ctx = new AudioCtx();
-      }
-      if (this.ctx && this.ctx.state === 'suspended') {
-        this.ctx.resume();
-      }
-    }
-
-    toggle() {
-      this.enabled = !this.enabled;
-      if (this.enabled) this.init();
-      return this.enabled;
-    }
-
-    playTick(freq = 900, duration = 0.03) {
-      if (!this.enabled || !this.ctx) return;
-      try {
-        const osc = this.ctx.createOscillator();
-        const gain = this.ctx.createGain();
-        osc.type = 'sine';
-        osc.frequency.setValueAtTime(freq, this.ctx.currentTime);
-        osc.frequency.exponentialRampToValueAtTime(300, this.ctx.currentTime + duration);
-
-        gain.gain.setValueAtTime(0.04, this.ctx.currentTime);
-        gain.gain.exponentialRampToValueAtTime(0.001, this.ctx.currentTime + duration);
-
-        osc.connect(gain);
-        gain.connect(this.ctx.destination);
-        osc.start();
-        osc.stop(this.ctx.currentTime + duration);
-      } catch (e) {
-        // Audio error silent fallback
-      }
-    }
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      progressBar.style.width = scrollPercent + '%';
+    }, { passive: true });
   }
 
-  const sfx = new HapticAudio();
-
   /* ==========================================================================
-     02. MULTI-AGENT TOPOLOGY CANVAS SIMULATION
+     02. INTERACTIVE AI AGENT TOPOLOGY (REASONING, ORCHESTRATION, RETRIEVAL, TOOL, EVAL)
      ========================================================================== */
   function initAgentCanvas() {
     const canvas = document.getElementById('agentTopologyCanvas');
@@ -67,7 +33,10 @@
     let animationFrameId;
     let isVisible = true;
 
-    // Handle high DPI
+    // Node Inspector Elements
+    const inspectorTitle = document.getElementById('inspectorNodeTitle');
+    const inspectorDesc = document.getElementById('inspectorNodeDesc');
+
     function resize() {
       const rect = canvas.parentElement.getBoundingClientRect();
       const dpr = window.devicePixelRatio || 1;
@@ -81,36 +50,113 @@
     window.addEventListener('resize', resize);
     resize();
 
-    // Agent Nodes Topology
+    // Exactly the 5 requested core nodes + 2 supporting nodes
     const nodes = [
-      { id: 'orch', name: 'Orchestrator Agent', type: 'orchestrator', color: '#3b82f6', x: 0.5, y: 0.45, vx: 0.1, vy: 0.1, radius: 18, pulse: 0 },
-      { id: 'clinical', name: 'Clinical RAG Agent', type: 'clinical', color: '#06b6d4', x: 0.22, y: 0.28, vx: -0.15, vy: 0.1, radius: 14, pulse: 1 },
-      { id: 'eval', name: 'LLM-as-Judge', type: 'evaluator', color: '#10b981', x: 0.78, y: 0.32, vx: 0.12, vy: -0.12, radius: 15, pulse: 2 },
-      { id: 'router', name: 'MCP Tool Router', type: 'orchestrator', color: '#8b5cf6', x: 0.32, y: 0.75, vx: -0.1, vy: -0.1, radius: 13, pulse: 3 },
-      { id: 'ehr', name: 'EHR Ingestion DAG', type: 'clinical', color: '#06b6d4', x: 0.68, y: 0.78, vx: 0.15, vy: 0.1, radius: 14, pulse: 4 },
-      { id: 'bedrock', name: 'Bedrock Multi-Model', type: 'orchestrator', color: '#3b82f6', x: 0.5, y: 0.15, vx: -0.08, vy: 0.08, radius: 12, pulse: 5 },
-      { id: 'guard', name: 'Clinical Guardrails', type: 'evaluator', color: '#10b981', x: 0.82, y: 0.62, vx: 0.08, vy: -0.08, radius: 12, pulse: 2.5 }
+      {
+        id: 'orchestration',
+        name: 'Orchestration',
+        tag: 'CORE AGENT',
+        color: '#45D9F5',
+        x: 0.5,
+        y: 0.48,
+        radius: 18,
+        pulse: 0,
+        desc: 'LangGraph state machines orchestrating multi-agent decision graphs with checkpoint persistence.'
+      },
+      {
+        id: 'reasoning',
+        name: 'Reasoning',
+        tag: 'MULTI-MODEL LLM',
+        color: '#A78BFA',
+        x: 0.5,
+        y: 0.16,
+        radius: 14,
+        pulse: 0,
+        desc: 'AWS Bedrock model parallelism & candidate routing across Claude 3.5 Sonnet and Haiku.'
+      },
+      {
+        id: 'retrieval',
+        name: 'Retrieval',
+        tag: 'HYBRID RAG',
+        color: '#45D9F5',
+        x: 0.2,
+        y: 0.38,
+        radius: 14,
+        pulse: 0,
+        desc: 'OpenSearch hybrid dense/sparse vector search with paragraph-exact clinical EHR citation grounding.'
+      },
+      {
+        id: 'tool_exec',
+        name: 'Tool Execution',
+        tag: 'MCP PROTOCOL',
+        color: '#A78BFA',
+        x: 0.26,
+        y: 0.78,
+        radius: 14,
+        pulse: 0,
+        desc: 'Model Context Protocol (MCP) tool connectors executing sandboxed external API and database calls.'
+      },
+      {
+        id: 'evaluation',
+        name: 'Evaluation',
+        tag: 'LLM-AS-A-JUDGE',
+        color: '#10B981',
+        x: 0.8,
+        y: 0.38,
+        radius: 15,
+        pulse: 0,
+        desc: 'Automated multi-metric benchmarking (semantic similarity, judge scoring) & clinical safety guardrails.'
+      },
+      {
+        id: 'ehr_ingest',
+        name: 'EHR Ingestion',
+        tag: 'DATA PIPELINE',
+        color: '#45D9F5',
+        x: 0.74,
+        y: 0.78,
+        radius: 13,
+        pulse: 0,
+        desc: 'Apache Airflow DAG pipelines transforming raw HL7 FHIR records into enriched vector indexes.'
+      }
     ];
 
-    // Connections between agents
+    // Interconnections
     const links = [
-      { from: 'orch', to: 'clinical', speed: 0.008, packets: [0.1, 0.6] },
-      { from: 'orch', to: 'eval', speed: 0.007, packets: [0.3, 0.8] },
-      { from: 'orch', to: 'router', speed: 0.009, packets: [0.2, 0.7] },
-      { from: 'orch', to: 'ehr', speed: 0.006, packets: [0.4, 0.9] },
-      { from: 'orch', to: 'bedrock', speed: 0.01, packets: [0.0, 0.5] },
-      { from: 'clinical', to: 'ehr', speed: 0.005, packets: [0.2] },
-      { from: 'eval', to: 'guard', speed: 0.007, packets: [0.45] },
-      { from: 'router', to: 'ehr', speed: 0.006, packets: [0.35] }
+      { from: 'orchestration', to: 'reasoning', speed: 0.009, packets: [0.1, 0.6] },
+      { from: 'orchestration', to: 'retrieval', speed: 0.008, packets: [0.2, 0.7] },
+      { from: 'orchestration', to: 'tool_exec', speed: 0.007, packets: [0.35, 0.85] },
+      { from: 'orchestration', to: 'evaluation', speed: 0.008, packets: [0.15, 0.65] },
+      { from: 'orchestration', to: 'ehr_ingest', speed: 0.006, packets: [0.4, 0.9] },
+      { from: 'retrieval', to: 'ehr_ingest', speed: 0.005, packets: [0.3] },
+      { from: 'reasoning', to: 'evaluation', speed: 0.007, packets: [0.5] }
     ];
 
     let mouse = { x: -1000, y: -1000, active: false };
+    let activeNode = nodes[0];
+
+    function updateInspector(node) {
+      if (!inspectorTitle || !inspectorDesc) return;
+      inspectorTitle.textContent = `${node.name} // [${node.tag}]`;
+      inspectorDesc.textContent = node.desc;
+    }
+    updateInspector(nodes[0]);
 
     canvas.addEventListener('mousemove', (e) => {
       const rect = canvas.getBoundingClientRect();
       mouse.x = e.clientX - rect.left;
       mouse.y = e.clientY - rect.top;
       mouse.active = true;
+
+      // Check hovered node
+      nodes.forEach((n) => {
+        const nx = n.x * width;
+        const ny = n.y * height;
+        const dist = Math.hypot(mouse.x - nx, mouse.y - ny);
+        if (dist < n.radius + 14) {
+          activeNode = n;
+          updateInspector(n);
+        }
+      });
     });
 
     canvas.addEventListener('mouseleave', () => {
@@ -122,14 +168,14 @@
       const clickX = e.clientX - rect.left;
       const clickY = e.clientY - rect.top;
 
-      // Burst packets on clicked node
       nodes.forEach((n) => {
         const nx = n.x * width;
         const ny = n.y * height;
         const dist = Math.hypot(clickX - nx, clickY - ny);
         if (dist < n.radius + 15) {
-          n.pulse = 5;
-          sfx.playTick(1200, 0.05);
+          n.pulse = 6;
+          activeNode = n;
+          updateInspector(n);
           links.forEach((l) => {
             if (l.from === n.id || l.to === n.id) {
               l.packets.push(0);
@@ -139,7 +185,6 @@
       });
     });
 
-    // Pause RAF when out of view
     const observer = new IntersectionObserver((entries) => {
       isVisible = entries[0].isIntersecting;
       if (isVisible && !animationFrameId) {
@@ -159,26 +204,26 @@
       ctx.clearRect(0, 0, width, height);
       time += 0.015;
 
-      // Update node positions subtly
+      // Gentle floating physics
       nodes.forEach((n) => {
         n.x += Math.sin(time + n.radius) * 0.0003;
         n.y += Math.cos(time + n.radius) * 0.0003;
 
-        // Mouse subtle interaction
+        // Subtle mouse pull
         if (mouse.active) {
           const nx = n.x * width;
           const ny = n.y * height;
           const dist = Math.hypot(mouse.x - nx, mouse.y - ny);
-          if (dist < 120) {
+          if (dist < 110) {
             const angle = Math.atan2(mouse.y - ny, mouse.x - nx);
-            const force = (120 - dist) / 120 * 0.6;
-            n.x -= Math.cos(angle) * force * 0.001;
-            n.y -= Math.sin(angle) * force * 0.001;
+            const force = (110 - dist) / 110 * 0.5;
+            n.x -= Math.cos(angle) * force * 0.0008;
+            n.y -= Math.sin(angle) * force * 0.0008;
           }
         }
       });
 
-      // Draw Links & Packets
+      // Draw Connection Lines & Packets
       links.forEach((link) => {
         const fromNode = nodes.find((n) => n.id === link.from);
         const toNode = nodes.find((n) => n.id === link.to);
@@ -189,15 +234,14 @@
         const x2 = toNode.x * width;
         const y2 = toNode.y * height;
 
-        // Line
         ctx.beginPath();
         ctx.moveTo(x1, y1);
         ctx.lineTo(x2, y2);
-        ctx.strokeStyle = 'rgba(255, 255, 255, 0.07)';
+        ctx.strokeStyle = 'rgba(146, 158, 173, 0.12)';
         ctx.lineWidth = 1;
         ctx.stroke();
 
-        // Packets
+        // Animated signal packets
         link.packets.forEach((p, index) => {
           link.packets[index] = (p + link.speed) % 1;
           const progress = link.packets[index];
@@ -218,38 +262,39 @@
       nodes.forEach((n) => {
         const nx = n.x * width;
         const ny = n.y * height;
+        const isHovered = (activeNode && activeNode.id === n.id);
 
-        // Pulse ring
+        // Pulse wave on click
         if (n.pulse > 0) {
           ctx.beginPath();
           ctx.arc(nx, ny, n.radius + (6 - n.pulse) * 4, 0, Math.PI * 2);
           ctx.strokeStyle = n.color;
           ctx.lineWidth = 1.5;
-          ctx.globalAlpha = Math.max(0, n.pulse / 5);
+          ctx.globalAlpha = Math.max(0, n.pulse / 6);
           ctx.stroke();
           ctx.globalAlpha = 1;
           n.pulse = Math.max(0, n.pulse - 0.05);
         }
 
-        // Outer glow
-        const gradient = ctx.createRadialGradient(nx, ny, n.radius * 0.3, nx, ny, n.radius * 2);
-        gradient.addColorStop(0, n.color + '40');
+        // Ambient radial glow
+        const gradient = ctx.createRadialGradient(nx, ny, n.radius * 0.3, nx, ny, n.radius * 2.2);
+        gradient.addColorStop(0, n.color + (isHovered ? '55' : '33'));
         gradient.addColorStop(1, 'transparent');
         ctx.fillStyle = gradient;
         ctx.beginPath();
-        ctx.arc(nx, ny, n.radius * 2, 0, Math.PI * 2);
+        ctx.arc(nx, ny, n.radius * 2.2, 0, Math.PI * 2);
         ctx.fill();
 
-        // Inner circle
+        // Node disc
         ctx.beginPath();
         ctx.arc(nx, ny, n.radius, 0, Math.PI * 2);
-        ctx.fillStyle = '#0f1420';
+        ctx.fillStyle = '#0E141C';
         ctx.fill();
-        ctx.strokeStyle = n.color;
-        ctx.lineWidth = 2;
+        ctx.strokeStyle = isHovered ? '#ffffff' : n.color;
+        ctx.lineWidth = isHovered ? 2.5 : 1.75;
         ctx.stroke();
 
-        // Core dot
+        // Node center core
         ctx.beginPath();
         ctx.arc(nx, ny, n.radius * 0.35, 0, Math.PI * 2);
         ctx.fillStyle = n.color;
@@ -257,7 +302,7 @@
 
         // Label
         ctx.font = '10px "JetBrains Mono", monospace';
-        ctx.fillStyle = '#94a3b8';
+        ctx.fillStyle = isHovered ? '#ffffff' : '#929EAD';
         ctx.textAlign = 'center';
         ctx.fillText(n.name, nx, ny + n.radius + 14);
       });
@@ -269,7 +314,34 @@
   }
 
   /* ==========================================================================
-     03. IMPACT METRIC COUNTERS
+     03. 3D CARD TILT & HOVER LIGHTING
+     ========================================================================== */
+  function initCardTilt() {
+    const cards = document.querySelectorAll('.project-card, .metric-card');
+    if (!cards.length || window.matchMedia('(pointer: coarse)').matches) return;
+
+    cards.forEach((card) => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+
+        const rotateX = ((y - centerY) / centerY) * -4;
+        const rotateY = ((x - centerX) / centerX) * 4;
+
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+      });
+
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = '';
+      });
+    });
+  }
+
+  /* ==========================================================================
+     04. IMPACT METRIC COUNTERS
      ========================================================================== */
   function initMetricCounters() {
     const metricCards = document.querySelectorAll('.metric-card');
@@ -308,7 +380,6 @@
       function update(currentTime) {
         const elapsed = currentTime - startTime;
         const progress = Math.min(elapsed / duration, 1);
-        // Ease Out Quart
         const ease = 1 - Math.pow(1 - progress, 4);
         const current = Math.floor(ease * target);
 
@@ -326,34 +397,34 @@
   }
 
   /* ==========================================================================
-     04. CASE STUDY MODAL & PROJECT DIRECTORY
+     05. PROJECT CASE STUDY MODAL DIRECTORY
      ========================================================================== */
   const projectDirectory = {
     travel: {
-      category: 'Agentic AI & Voice Agents',
+      category: 'Agentic AI & Voice Streaming',
       title: 'Agentic Virtual Travel Assistant',
-      tagline: 'Autonomous multi-day travel planner with LangGraph Deep Agents & real-time LiveKit streaming voice.',
-      problem: 'Traditional travel planning forces users to bounce across fragmented search engines, compare conflicting airline APIs, and manually stitch itineraries with zero contextual memory.',
-      solution: 'Engineered an autonomous travel agent powered by LangGraph that plans complete end-to-end multi-day itineraries using live flight APIs, lodging inventories, and local event aggregators. Built with streaming token execution and integrated with LiveKit for low-latency voice-to-voice interaction.',
-      architecture: `[User Voice / Text Input]
-       ↓ (LiveKit WebRTC Stream)
-[Orchestrator: LangGraph StateGraph]
-   ├── [Flight Search Sub-Agent] ──→ Amadeus / Skyscanner APIs
-   ├── [Lodging Evaluation Agent] ──→ Real-time Price Index
+      tagline: 'LangGraph Deep Agent autonomously planning multi-day itineraries with live APIs & LiveKit voice-to-voice streaming.',
+      problem: 'Traditional travel booking forces users to manually juggle airline sites, lodging inventories, and itinerary schedules with zero persistent contextual memory.',
+      solution: 'Engineered an autonomous travel agent powered by LangGraph that plans complete end-to-end multi-day itineraries using live flight APIs, lodging inventories, and local event aggregators. Integrated streaming token execution and LiveKit for real-time WebRTC voice interaction.',
+      architecture: `[User Voice / Text Stream]
+       ↓ (LiveKit WebRTC Low-Latency Stream)
+[LangGraph Multi-Agent Orchestrator]
+   ├── [Flight Search Sub-Agent] ──→ Amadeus & Skyscanner APIs
+   ├── [Lodging Evaluation Agent] ──→ Real-Time Rate Ingestion
    ├── [Itinerary Optimization Node] ──→ Topological Route Planner
-   └── [Safety & Budget Evaluator] ──→ Constraint Guardrail
+   └── [Constraint & Safety Agent] ──→ Budget & Time Guardrails
        ↓
-[Real-Time Synthesized Audio & Visual Plan Delivery]`,
-      challenges: 'Managing long-horizon multi-step tool calls without hallucinating nonexistent flight routes or dates; optimized state transitions using hierarchical agent graphs and checkpoint persistence.',
+[Real-Time Synthesized Audio & Dynamic Visual Plan Delivery]`,
+      challenges: 'Handling long-horizon tool execution without compounding hallucinations; implemented checkpoint state serialization and strict constraint verification.',
       outcomes: 'Sub-second initial voice turn response, 100% deterministic constraint checking on budget limits, and fully automated multi-day route generation.',
       tech: ['LangGraph', 'LiveKit WebRTC', 'Open-WebUI', 'Python', 'FastAPI', 'Vector Search'],
       repo: 'https://github.com/ashwin-srdy'
     },
     smarterdx: {
       category: 'Healthcare AI & Clinical Agents',
-      title: 'SmarterNotes & Clinical DAG Chart Enrichment',
-      tagline: 'Multi-agent clinical documentation system transforming full EHR records into evidence-backed clinical justifications.',
-      problem: 'Physicians lose over 2 hours daily on documentation and medical-necessity justifications. Manual clinical chart review is tedious, prone to missed diagnoses, and costly for hospital revenue cycles.',
+      title: 'SmarterNotes & Clinical Chart Enrichment',
+      tagline: 'Multi-agent clinical documentation system transforming full EHR charts into evidence-backed notes with exact paragraph citations.',
+      problem: 'Physicians lose over 2 hours daily on documentation and medical-necessity justifications. Manual clinical chart review is tedious and prone to missed diagnoses.',
       solution: 'Architected LangGraph-based clinical agents (SmarterNotes & SmarterUtilization) and DAG-orchestrated enrichment pipelines. Ingests full EHR records, extracts clinical evidence with exact paragraph citations, and drafts clinical notes reviewed by physicians.',
       architecture: `[Hospital EHR / HL7 Ingestion]
        ↓
@@ -376,7 +447,7 @@
       category: 'Agentic AI & Cloud Automation',
       title: 'OpenClaw Marketing Automation Bot',
       tagline: 'Autonomous marketing automation agent running on Google Cloud for lead enrichment and hyper-personalized outreach.',
-      problem: 'Marketing teams waste hours manually identifying high-intent prospects, scouring LinkedIn/news sources for context, and composing cold emails with abysmal conversion rates.',
+      problem: 'Marketing teams waste hours manually identifying high-intent prospects, scouring LinkedIn/news sources for context, and composing cold emails with low conversion rates.',
       solution: 'Built OpenClaw, an autonomous marketing automation agent on Google Cloud that continuously monitors industry signals, extracts lead context, generates personalized outreach copy tailored to company milestones, and syncs scheduling links.',
       architecture: `[Target Domain & Profile List]
        ↓
@@ -446,7 +517,7 @@
        ↓
 [Real-Time Visual Overlay & LLM Form Coaching Feedback]`,
       challenges: 'Handling high-speed clubhead and body movement without motion blur skewing joint angle measurements; applied Kalman filtering for temporal smoothing.',
-      outcomes: 'Real-time 30+ FPS tracking on browser/mobile without specialized hardware; instant actionable swing posture corrections.',
+      outcomes: 'Real-time 30+ FPS tracking on standard video feeds without specialized hardware; instant actionable swing posture corrections.',
       tech: ['MediaPipe', 'OpenCV', 'Python', 'FastAPI', 'React', 'Streamlit'],
       repo: 'https://github.com/ashwin-srdy'
     },
@@ -510,8 +581,6 @@
       const data = projectDirectory[projectId];
       if (!data) return;
 
-      sfx.playTick(1000, 0.04);
-
       modalCategory.textContent = data.category;
       modalTitle.textContent = data.title;
       modalTagline.textContent = data.tagline;
@@ -521,7 +590,6 @@
       modalChallenges.textContent = data.challenges;
       modalOutcomes.textContent = data.outcomes;
 
-      // Tech tags
       modalTechStack.innerHTML = '';
       data.tech.forEach((t) => {
         const span = document.createElement('span');
@@ -531,31 +599,24 @@
       });
 
       modalRepoLink.href = data.repo;
-
       modalOverlay.classList.add('open');
       document.body.style.overflow = 'hidden';
     }
 
     function closeModal() {
-      sfx.playTick(600, 0.03);
       modalOverlay.classList.remove('open');
       document.body.style.overflow = '';
     }
 
-    // Attach click to all project cards
     document.querySelectorAll('.project-card').forEach((card) => {
       card.addEventListener('click', (e) => {
-        // Prevent if clicking directly on a link that has an external target
-        if (e.target.closest('a') && !e.target.closest('.open-modal-trigger')) {
-          return;
-        }
+        if (e.target.closest('a') && !e.target.closest('.open-modal-trigger')) return;
         const id = card.dataset.project;
         openModal(id);
       });
     });
 
     closeBtn.addEventListener('click', closeModal);
-
     modalOverlay.addEventListener('click', (e) => {
       if (e.target === modalOverlay) closeModal();
     });
@@ -568,7 +629,7 @@
   }
 
   /* ==========================================================================
-     05. PROJECT CATEGORY FILTER
+     06. PROJECT CATEGORY FILTER
      ========================================================================== */
   function initProjectFilters() {
     const filterBtns = document.querySelectorAll('.filter-btn');
@@ -576,7 +637,6 @@
 
     filterBtns.forEach((btn) => {
       btn.addEventListener('click', () => {
-        sfx.playTick(800, 0.03);
         filterBtns.forEach((b) => b.classList.remove('active'));
         btn.classList.add('active');
 
@@ -603,7 +663,7 @@
   }
 
   /* ==========================================================================
-     06. FUNCTIONAL CONTACT FORM & CLIPBOARD COPY SYSTEM
+     07. FUNCTIONAL CONTACT FORM & CLIPBOARD COPY SYSTEM
      ========================================================================== */
   function initContactForm() {
     const form = document.getElementById('contactForm');
@@ -625,7 +685,6 @@
         e.preventDefault();
         const email = 'ashwinsang.work@gmail.com';
         navigator.clipboard.writeText(email).then(() => {
-          sfx.playTick(1100, 0.04);
           showToast('Email address copied to clipboard!');
         });
       });
@@ -635,7 +694,6 @@
 
     form.addEventListener('submit', (e) => {
       e.preventDefault();
-      sfx.playTick(1000, 0.05);
 
       const name = document.getElementById('contactName').value.trim();
       const email = document.getElementById('contactEmail').value.trim();
@@ -648,22 +706,16 @@
         return;
       }
 
-      // Format payload for email client & clipboard
-      const mailtoSubject = encodeURIComponent(`[Portfolio Inquiry] ${subject || 'Engineering Discussion'}`);
-      const mailtoBody = encodeURIComponent(
-        `Hi Ashwin,\n\n${message}\n\nBest regards,\n${name}\nContact: ${email}`
-      );
+      const mailtoSubject = encodeURIComponent(`[ASHWIN.SYS Inquiry] ${subject || 'Engineering Discussion'}`);
+      const mailtoBody = encodeURIComponent(`Hi Ashwin,\n\n${message}\n\nBest regards,\n${name}\nContact: ${email}`);
       const mailtoUrl = `mailto:ashwinsang.work@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`;
 
-      // Copy text to clipboard so user has it immediately
-      const clipboardText = `To: ashwinsang.work@gmail.com\nSubject: [Portfolio Inquiry] ${subject}\n\nHi Ashwin,\n\n${message}\n\nBest regards,\n${name}\n${email}`;
+      const clipboardText = `To: ashwinsang.work@gmail.com\nSubject: [ASHWIN.SYS Inquiry] ${subject}\n\nHi Ashwin,\n\n${message}\n\nBest regards,\n${name}\n${email}`;
 
       navigator.clipboard.writeText(clipboardText).then(() => {
-        feedbackBox.innerHTML = `<strong>Inquiry prepared!</strong> Launching your email client...<br><span style="opacity: 0.8; font-size: 0.78rem;">Message text was also copied to your clipboard.</span>`;
+        feedbackBox.innerHTML = `<strong>Inquiry prepared!</strong> Launching your email client...<br><span style="opacity: 0.8; font-size: 0.78rem;">Message was copied to clipboard.</span>`;
         feedbackBox.className = 'form-feedback success';
         showToast('Message copied to clipboard & opening email client!');
-
-        // Trigger mailto
         window.location.href = mailtoUrl;
       }).catch(() => {
         window.location.href = mailtoUrl;
@@ -672,7 +724,7 @@
   }
 
   /* ==========================================================================
-     07. RESUME MODAL & VIEWER
+     08. RESUME MODAL & VIEWER
      ========================================================================== */
   function initResumeModal() {
     const resumeModal = document.getElementById('resumeModal');
@@ -684,20 +736,17 @@
     openBtns.forEach((btn) => {
       btn.addEventListener('click', (e) => {
         e.preventDefault();
-        sfx.playTick(900, 0.03);
         resumeModal.classList.add('open');
         document.body.style.overflow = 'hidden';
       });
     });
 
     function closeResume() {
-      sfx.playTick(600, 0.03);
       resumeModal.classList.remove('open');
       document.body.style.overflow = '';
     }
 
     if (closeBtn) closeBtn.addEventListener('click', closeResume);
-
     resumeModal.addEventListener('click', (e) => {
       if (e.target === resumeModal) closeResume();
     });
@@ -717,7 +766,7 @@
   }
 
   /* ==========================================================================
-     08. NAVIGATION, SCROLLSPY & AUDIO TOGGLE
+     09. NAVIGATION & ACTIVE SCROLLSPY
      ========================================================================== */
   function initNavigation() {
     const navBar = document.querySelector('.nav-bar');
@@ -726,32 +775,16 @@
     const mobileToggle = document.querySelector('.mobile-nav-toggle');
     const mobileDrawer = document.querySelector('.mobile-drawer');
     const mobileLinks = document.querySelectorAll('.mobile-drawer-link');
-    const soundToggle = document.getElementById('soundToggleBtn');
 
-    // Sound toggle
-    if (soundToggle) {
-      soundToggle.addEventListener('click', () => {
-        const isActive = sfx.toggle();
-        soundToggle.classList.toggle('active', isActive);
-        soundToggle.innerHTML = isActive
-          ? '<i class="bi bi-volume-up-fill"></i>'
-          : '<i class="bi bi-volume-mute"></i>';
-        soundToggle.title = isActive ? 'Sound FX: ON' : 'Sound FX: OFF';
-        if (isActive) sfx.playTick(1200, 0.04);
-      });
-    }
-
-    // Scrollspy
     window.addEventListener('scroll', () => {
       const scrollY = window.pageYOffset;
 
-      // Blur navbar on scroll
       if (scrollY > 50) {
-        navBar.style.background = 'rgba(14, 18, 26, 0.9)';
-        navBar.style.boxShadow = '0 15px 35px -5px rgba(0, 0, 0, 0.7)';
+        navBar.style.background = 'rgba(14, 20, 28, 0.94)';
+        navBar.style.boxShadow = '0 15px 35px -5px rgba(0, 0, 0, 0.75)';
       } else {
-        navBar.style.background = 'rgba(14, 18, 26, 0.75)';
-        navBar.style.boxShadow = '0 10px 30px -10px rgba(0, 0, 0, 0.5)';
+        navBar.style.background = 'rgba(14, 20, 28, 0.82)';
+        navBar.style.boxShadow = '0 12px 35px -8px rgba(0, 0, 0, 0.65)';
       }
 
       let current = '';
@@ -769,9 +802,8 @@
           link.classList.add('active');
         }
       });
-    });
+    }, { passive: true });
 
-    // Mobile drawer
     if (mobileToggle && mobileDrawer) {
       mobileToggle.addEventListener('click', () => {
         const isOpen = mobileDrawer.classList.toggle('open');
@@ -793,7 +825,9 @@
      INITIALIZATION ON DOM LOAD
      ========================================================================== */
   document.addEventListener('DOMContentLoaded', () => {
+    initScrollProgress();
     initAgentCanvas();
+    initCardTilt();
     initMetricCounters();
     initProjectModals();
     initProjectFilters();
